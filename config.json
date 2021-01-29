@@ -1,19 +1,13 @@
 {
-	"network": "mainnet",
+	"network": "local",
+	"type": "ipc",
 	"https": [
 		"https://mainnet.infura.io/v3/93ca33aa55d147f08666ac82d7cc69fd",
 		"https://mainnet.infura.io/v3/7aef3f0cd1f64408b163814b22cc643c",
 		"https://mainnet.infura.io/v3/b203d49348c546c2b5614e5197788937",
 		"https://mainnet.infura.io/v3/3258e142b54447a89b8c002ee7465a6d",
-		"https://mainnet.infura.io/v3/ef5f6b3377d44afc8b284d6aa6033a6f",
-		"https://mainnet.infura.io/v3/50dd475d95914816b5fe67dc424c4bad",
 		"https://mainnet.infura.io/v3/c4898a6d00c44e82a3bbbe9e188f6717",
 		"https://mainnet.infura.io/v3/9db80c814ba04b51a0b79d439a3420e0",
-		"https://mainnet.infura.io/v3/c52c50885aa146d38ee50a9d274b2759",
-		"https://mainnet.infura.io/v3/da1f666665224bd18bccb5e6562de585",
-		"https://mainnet.infura.io/v3/40b516c74f2a4c5e8d97c2762e726d57",
-		"https://mainnet.infura.io/v3/adf07a1ccba04122b2afaf1c59be0e9d",
-		"https://mainnet.infura.io/v3/b1d55fa8873b4d7dbf8efa938a475f32",
 		"https://mainnet.infura.io/v3/e2da43769d694713b61702628ef124da",
 		"https://mainnet.infura.io/v3/e3e81da39a694d27b8b864800d70e5db",
 		"https://mainnet.infura.io/v3/ad5b634f40b349be8e5d77186c181531",
@@ -26,7 +20,7 @@
 		"wss": "ws://127.0.0.1:8546"
 	},
 	"mainnet": {
-		"http": "https://mainnet.infura.io/v3/93ca33aa55d147f08666ac82d7cc69fd",
+		"http": "https://mainnet.infura.io/v3/88da162116db4df58a74f30dde4c9073",
 		"wss": "wss://mainnet.infura.io/ws/v3/93ca33aa55d147f08666ac82d7cc69fd"
 	},
 	"ropsten": {
