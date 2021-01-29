@@ -34,6 +34,14 @@ def to_tx_receipt(r):
     r['to'] = w3.toChecksumAddress(r['to'])
     return r
 
+pairs = []
+pairs_dict = {}
+def to_dict(pairs):
+    d = {}
+    for i in range(len(pairs)):
+        d[pairs[i]['id']] = i
+    return d
+
 def parse_cycle_arb(info):
     receipt = info['receipt']
     if len(receipt['logs']) <= 1:
@@ -45,17 +53,22 @@ def parse_cycle_arb(info):
             continue
         pair = None
         addr = w3.toChecksumAddress(log['address'])
-
+        try:
+            pair = pairs[pairs_dict[addr]]
+        except Exception as e:
+            pass
+        if not pair:
+            continue
         l = to_log_receipt(log.copy())
         event = c.events.Swap().processLog(l)
-        input_token = pair['token0']['address']
+        input_token = pair['token0']['id']
         input_amount = event['args']['amount0In']
-        output_token = pair['token1']['address']
+        output_token = pair['token1']['id']
         output_amount = event['args']['amount1Out']
         if event['args']['amount1In'] > 0:
-            input_token = pair['token1']['address']
+            input_token = pair['token1']['id']
             input_amount = event['args']['amount1In']
-            output_token = pair['token0']['address']
+            output_token = pair['token0']['id']
             output_amount = event['args']['amount0Out']
         path.append(input_token)
         amounts.append(input_amount)
@@ -64,24 +77,30 @@ def parse_cycle_arb(info):
     if len(path) >= 3 and path[0] == path[-1]:
         revenue = amounts[-1] - amounts[0]
         tx = info['tx']
-        cost = tx['gasPrice']*int(receipt['gasUsed'], 16)
+        cost = int(tx['gasPrice'], 16)*int(receipt['gasUsed'], 16)
         return { 'tx': tx, 'receipt': receipt, 'path': path, 'amounts': amounts, 'revenue': revenue, 'cost': cost }
     return None
 
 def process_receipts():
     with open('/data/receipts_export_new', 'r') as f:
-        # for _ in range(50944503):
-            # next(f)
+        idx = 0
+        for _ in range(6357186):
+            idx += 1
+            next(f)
+        count = 0
         for line in f:
             info = json.loads(line)
             r = info['receipt']
-            print('block: ', int(['blockNumber'], 16), '/ 11709847', 'line:', idx)
+            print('block: ', int(r['blockNumber'], 16), '/ 11709847', 'line:', idx, 'count:', count)
             idx += 1
             ret = parse_cycle_arb(info)
             if not ret:
                 continue
-            with open('/data/new_uni_arb_info', 'a') as f1:
+            count += 1
+            with open('/data/uniarb', 'a') as f1:
                 f1.write(json.dumps(ret)+"\n")
 
 if __name__ == '__main__':
+    pairs = json.load(open('data/pairs.json'))
+    pairs_dict = to_dict(pairs)
     process_receipts()

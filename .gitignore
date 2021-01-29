@@ -5,6 +5,9 @@
 #   git config --global core.excludesfile ~/.gitignore_global
 
 /data
+__pycache__
+log
+nohup.out
 
 /tmp
 */**/*un~
