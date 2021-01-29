@@ -707,8 +707,8 @@ func (bc *BlockChain) ExportN(w io.Writer, first uint64, last uint64) error {
 }
 
 type Info struct {
-	tx *types.Txdata  `json:"tx"    gencodec:"required"`
-	receipt *types.Receipt `json:"receipt"    gencodec:"required"`
+	Tx types.Txdata  `json:"tx"    gencodec:"required"`
+	Receipt types.Receipt `json:"receipt"    gencodec:"required"`
 }
 
 func (bc *BlockChain) ExportReceiptsN(w io.Writer, first uint64, last uint64) error {
@@ -721,8 +721,13 @@ func (bc *BlockChain) ExportReceiptsN(w io.Writer, first uint64, last uint64) er
 	log.Info("Exporting batch of block receipts", "count", last-first+1)
 
 	sync := common.HexToHash("0x1c411e9a96e071241c2f21f7726b17ae89e3cab4c78be50e062b03a9fffbbad1")
+	//sync_topic := "0x1c411e9a96e071241c2f21f7726b17ae89e3cab4c78be50e062b03a9fffbbad1"
 	start, reported := time.Now(), time.Now()
 	for nr := first; nr <= last; nr++ {
+		header := bc.GetHeaderByNumber(nr)
+		if !types.BloomLookup(header.Bloom, sync) {
+			continue
+		}
 		block := bc.GetBlockByNumber(nr)
 		if block == nil {
 			return fmt.Errorf("export failed on #%d: not found", nr)
@@ -731,33 +736,26 @@ func (bc *BlockChain) ExportReceiptsN(w io.Writer, first uint64, last uint64) er
 		if receipts == nil {
 			return fmt.Errorf("export failed on #%d: receipts not found", nr)
 		}
-		// if err := receipts.Write(w); err != nil {
-		// 	return err
-		// }
 		for i := 0; i < len(receipts); i++ {
 			is_uni := false
-			for j := 0; j < len(receipts[i].Logs); j++ {
-				for k := 0; k < len(receipts[i].Logs[j].Topics); k++ {
-					if receipts[i].Logs[j].Topics[k] == sync {
-						is_uni = true
-						break
-					}
-				}
-				if is_uni {
-					break
-				}
+			/*if receipts[i].Status == 0 {
+				is_uni = true
+			} else*/
+			if types.BloomLookup(receipts[i].Bloom, sync) {
+				is_uni = true
 			}
 			if is_uni {
 				tx, _, _, _ := rawdb.ReadTransaction(bc.db, receipts[i].TxHash)
 				if tx == nil {
 					return nil
 				}
-				info := Info{tx.TxData(), receipts[i]}
+				info := Info{*tx.TxData(), *receipts[i]}
 				b, err := json.Marshal(info)
 				if err != nil {
 					return err
 				}
 				w.Write(b)
+				w.Write([]byte("\n"))
 			}
 		}
 	

@@ -1,0 +1,70 @@
+{
+	"network": "mainnet",
+	"https": [
+		"https://mainnet.infura.io/v3/93ca33aa55d147f08666ac82d7cc69fd",
+		"https://mainnet.infura.io/v3/7aef3f0cd1f64408b163814b22cc643c",
+		"https://mainnet.infura.io/v3/b203d49348c546c2b5614e5197788937",
+		"https://mainnet.infura.io/v3/3258e142b54447a89b8c002ee7465a6d",
+		"https://mainnet.infura.io/v3/ef5f6b3377d44afc8b284d6aa6033a6f",
+		"https://mainnet.infura.io/v3/50dd475d95914816b5fe67dc424c4bad",
+		"https://mainnet.infura.io/v3/c4898a6d00c44e82a3bbbe9e188f6717",
+		"https://mainnet.infura.io/v3/9db80c814ba04b51a0b79d439a3420e0",
+		"https://mainnet.infura.io/v3/c52c50885aa146d38ee50a9d274b2759",
+		"https://mainnet.infura.io/v3/da1f666665224bd18bccb5e6562de585",
+		"https://mainnet.infura.io/v3/40b516c74f2a4c5e8d97c2762e726d57",
+		"https://mainnet.infura.io/v3/adf07a1ccba04122b2afaf1c59be0e9d",
+		"https://mainnet.infura.io/v3/b1d55fa8873b4d7dbf8efa938a475f32",
+		"https://mainnet.infura.io/v3/e2da43769d694713b61702628ef124da",
+		"https://mainnet.infura.io/v3/e3e81da39a694d27b8b864800d70e5db",
+		"https://mainnet.infura.io/v3/ad5b634f40b349be8e5d77186c181531",
+		"https://mainnet.infura.io/v3/89dbeeaefe1847c085a3eabc7794fa47",
+		"https://mainnet.infura.io/v3/5b34306b94414c55a0779ae253f80b6f",
+		"https://mainnet.infura.io/v3/5f9c7a4d6f0e4c9aa48ae4044daee46b"
+	],
+	"local": {
+		"http": "http://127.0.0.1:8545",
+		"wss": "ws://127.0.0.1:8546"
+	},
+	"mainnet": {
+		"http": "https://mainnet.infura.io/v3/93ca33aa55d147f08666ac82d7cc69fd",
+		"wss": "wss://mainnet.infura.io/ws/v3/93ca33aa55d147f08666ac82d7cc69fd"
+	},
+	"ropsten": {
+		"http": "https://ropsten.infura.io/v3/7aef3f0cd1f64408b163814b22cc643c",
+		"wss": "wss://ropsten.infura.io/ws/v3/93ca33aa55d147f08666ac82d7cc69fd"
+	},
+	"kovan": {
+		"http": "https://kovan.infura.io/v3/7aef3f0cd1f64408b163814b22cc643c",
+		"wss": "wss://kovan.infura.io/ws/v3/93ca33aa55d147f08666ac82d7cc69fd"
+	},
+	"gasnow_tx": "https://api.taichi.network:10001/rpc/public",
+	"gasnow": "https://gasnow.sparkpool.com/api/v3/gas/price",
+
+	"address": "0xC1817A7813B7861a62C521a62704CB5408cB6C87",
+	"privkey": "b099f26019a0745904b5c30eab3ebd59eef2d9cb42c629c6663d1a6c1484893c",
+
+	"weth": {
+		"mainnet": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+		"local": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+		"ropsten": "0xc778417E063141139Fce010982780140Aa0cD5Ab",
+		"kovan": "0xd0A1E359811322d97991E03f863a0C30C2cF029C"
+	},
+	"usdt": {
+		"mainnet": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+		"local": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+		"ropsten": "",
+		"kovan": ""
+	},
+	"usdc": {
+		"mainnet": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+		"local": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+		"ropsten": "",
+		"kovan": "0xe22da380ee6B445bb8273C81944ADEB6E8450422"
+	},
+	"dai": {
+		"mainnet": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+		"local": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+		"ropsten": "0xaD6D458402F60fD3Bd25163575031ACDce07538D",
+		"kovan": "0xFf795577d9AC8bD7D90Ee22b6C1703490b6512FD"
+	}
+}
