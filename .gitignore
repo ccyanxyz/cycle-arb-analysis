@@ -4,8 +4,11 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile ~/.gitignore_global
 
-/data
-__pycache__
+cycle.json
+1inch_cycle.json
+router_cycle.json
+
+__pycache__/*
 log
 nohup.out
 

@@ -1,5 +1,5 @@
 {
-	"network": "local",
+	"network": "mainnet",
 	"type": "ipc",
 	"https": [
 		"https://mainnet.infura.io/v3/93ca33aa55d147f08666ac82d7cc69fd",
