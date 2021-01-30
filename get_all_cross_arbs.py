@@ -34,6 +34,8 @@ def to_tx_receipt(r):
     r['to'] = w3.toChecksumAddress(r['to'])
     return r
 
+uni_pairs = []
+sushi_pairs = []
 pairs = []
 pairs_dict = {}
 def to_dict(pairs):
@@ -48,6 +50,7 @@ def parse_cycle_arb(info):
         return None
     path = []
     amounts = []
+    path_pairs = []
     for log in receipt['logs']:
         if not len(log['topics']) or not log['topics'][0] == swap_topic:
             continue
@@ -56,9 +59,9 @@ def parse_cycle_arb(info):
         try:
             pair = pairs[pairs_dict[addr]]
         except Exception as e:
-            pass
         if not pair:
             continue
+        path_pairs.append(pair)
         l = to_log_receipt(log.copy())
         event = c.events.Swap().processLog(l)
         input_token = pair['token0']['id']
@@ -78,9 +81,20 @@ def parse_cycle_arb(info):
         revenue = amounts[-1] - amounts[0]
         tx = info['tx']
         cost = int(tx['gasPrice'], 16)*int(receipt['gasUsed'], 16)
-        return { 'tx': tx, 'receipt': receipt, 'path': path, 'amounts': amounts, 'revenue': revenue, 'cost': cost }
+        return { 'tx': tx, 'receipt': receipt, 'path': path, 'amounts': amounts, 'revenue': revenue, 'cost': cost, 'path_pairs': path_pairs }
     return None
 
+def is_cross_arb(path_pairs):
+    flag1 = False
+    flag2 = False
+    for p in path_pairs:
+        if p in uni_pairs.keys():
+            flag1 = True
+        if p in sushi_pairs.keys():
+            flag2 = True
+        if flag1 and flag2:
+            return True
+    return False
 def process_receipts():
     with open('/data/receipts_export_new', 'r') as f:
         idx = 0
@@ -98,11 +112,15 @@ def process_receipts():
             ret = parse_cycle_arb(info)
             if not ret:
                 continue
+            if not is_cross_arb(ret['path_pairs']):
+                continue
             count += 1
-            with open('/data/sushi_arb', 'a') as f1:
+            with open('/data/cross_arb', 'a') as f1:
                 f1.write(json.dumps(ret)+"\n")
 
 if __name__ == '__main__':
-    pairs = json.load(open('data/sushi_pairs.json'))
+    uni_pairs = json.load(open('data/pairs.json'))
+    sushi_pairs = json.load(open('data/sushi_pairs.json'))
+    pairs = uni_pairs.extend(sushi_pairs)
     pairs_dict = to_dict(pairs)
     process_receipts()
