@@ -36,6 +36,8 @@ def to_tx_receipt(r):
 
 uni_pairs = []
 sushi_pairs = []
+uni_dict = {}
+sushi_dict = {}
 pairs = []
 pairs_dict = {}
 def to_dict(pairs):
@@ -59,6 +61,7 @@ def parse_cycle_arb(info):
         try:
             pair = pairs[pairs_dict[addr]]
         except Exception as e:
+            pass
         if not pair:
             continue
         path_pairs.append(pair)
@@ -88,13 +91,14 @@ def is_cross_arb(path_pairs):
     flag1 = False
     flag2 = False
     for p in path_pairs:
-        if p in uni_pairs.keys():
+        if p in list(uni_dict.keys()):
             flag1 = True
-        if p in sushi_pairs.keys():
+        if p in list(sushi_dict.keys()):
             flag2 = True
         if flag1 and flag2:
             return True
     return False
+
 def process_receipts():
     with open('/data/receipts_export_new', 'r') as f:
         idx = 0
@@ -120,7 +124,11 @@ def process_receipts():
 
 if __name__ == '__main__':
     uni_pairs = json.load(open('data/pairs.json'))
+    uni_dict = to_dict(uni_pairs)
     sushi_pairs = json.load(open('data/sushi_pairs.json'))
-    pairs = uni_pairs.extend(sushi_pairs)
+    sushi_dict = to_dict(sushi_pairs)
+    pairs = []
+    pairs.extend(uni_pairs)
+    pairs.extend(sushi_pairs)
     pairs_dict = to_dict(pairs)
     process_receipts()
