@@ -3,3 +3,12 @@ end = 11731968
 11709847
 
 22959997 /data/receipts_export_new
+
+1. arbitrage index
+2. daily mean revenue per tx
+3. profit/revenue/cost distribution
+4. failed tx, cost distribution
+5. bot revenue / profit distribution
+6. before/after arbitrage a*b b*c c*a
+7. sushiswap blockwise reserves
+8. LP revenue
