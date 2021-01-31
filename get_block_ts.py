@@ -10,4 +10,3 @@ for i in range(start, end+1):
     blk = w3.eth.getBlock(i)
     d[i] = blk['timestamp']
 json.dump(d, open('data/ts.json', 'w'))
-

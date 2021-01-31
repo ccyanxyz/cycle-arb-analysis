@@ -5,7 +5,7 @@ def sort_dict(d):
 
 stats = {}
 
-with open('data/cycle.json', 'r') as f:
+with open('data/cycle_include_router.json', 'r') as f:
     for line in f:
         info = json.loads(line)
         start = info['path'][0]
