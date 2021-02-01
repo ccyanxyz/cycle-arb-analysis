@@ -10,7 +10,7 @@ count uni/sushi total txs √
 
 1. arbitrage index top10
 2. daily mean revenue per tx √
-3. profit/revenue/cost distribution
+3. profit/revenue/cost distribution √
 4. failed tx, cost distribution
 5. bot revenue / profit distribution
 6. before/after arbitrage a*b b*c c*a
