@@ -6,7 +6,7 @@ end = 11731968
 
 fig3 expand √
 fig7 count cycle √
-count uni/sushi total txs
+count uni/sushi total txs √
 
 1. arbitrage index top10
 2. daily mean revenue per tx √

@@ -29,7 +29,7 @@ for path in top10:
 stats = {}
 for addr in top10_path_pair_addrs:
     stats[addr] = {}
-with open('../files/blockwise_reserves', 'r') as f:
+with open('data/blockwise_reserves', 'r') as f:
     idx = 0
     for line in f:
         info = json.loads(line)
@@ -50,20 +50,4 @@ with open('../files/blockwise_reserves', 'r') as f:
             if addr in top10_path_pair_addrs:
                 stats[addr][blockNumber] = {'r0': r0, 'r1': r1}
         idx += 1
-json.dump(stats, open('data/blockwise_reserves.json', 'w'))
-
-'''
-ma_bot_profit_graph_lines = ""
-for addr in top10:
-    bot_profit_coords = ""
-    bot_profit = [data[addr][k] for k in data[addr]]
-    bot_profit_ma = get_moving_average(bot_profit, 7)
-    i = 0
-    for k in data[addr].keys():
-        bot_profit_coords += "(%s,%f) " % (k, bot_profit_ma[i])
-        i += 1
-    ma_bot_profit_graph_lines += COORDS_CONSTANT.replace("%coords%", bot_profit_coords) + "\n"
-
-top_bots = ['ETH-YAM-yCRV', 'ETH-XSP-XFI', 'ETH-XRT-RWS', 'ETH-YAM-yyCRV', 'ETH-XAMP-TOB', 'ETH-$BASED-sUSD', 'ETH-SWAP-HEX2T', 'ETH-YFBETA-YFARM', 'ETH-UniFi-buidl', 'ETH-XSP-USDT']
-open('reports/top10_paths.tex', 'w').write(LINE_TEMPLATE.replace("%plots%", ma_bot_profit_graph_lines).replace("%legendkeys%", ",".join([x for x in top_bots])).replace("%title%", "Top 10 Ring Path Txs, 7-Day Moving Average").replace("%ylabel%", "Number of Txs").replace("%max%", str(2*5000)).replace("%legendpos%", "outer north east").replace("%extraaxisoptions%", ",enlarge x limits=-1,width=.9\\textwidth, height=0.4\\textwidth,x label style={at={(1.15,-.15)},anchor=south,}"))
-'''
+json.dump(stats, open('data/toppair_blockwise_reserves.json', 'w'))
