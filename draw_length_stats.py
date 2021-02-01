@@ -5,18 +5,20 @@ matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 
 def sort_dict(d):
-    return {k: v for k, v in sorted(d.items(), key=lambda item: int(item[0]), reverse=False)}
+    return {k: v for k, v in sorted(d.items(), key=lambda item: int(float(item[0])), reverse=False)}
 
-data = json.load(open('data/cycle_length_stats.json'))
+data = json.load(open('data/len_stats_new.json'))
 data = sort_dict(data)
 
-bins = [k for k in data.keys()]
+bins = [int(float(k)) for k in data.keys()]
+print(bins)
 y = [data[k] for k in data.keys()]
 
+plt.figure(figsize=(10, 6))
 plt.bar(bins, y, color='b')
-# plt.xticks(bins)
-plt.xlabel('Arbitrage Path Length')
-plt.ylabel('Number of Arbitrage Txs')
+plt.xticks(bins)
+plt.xlabel('Arbitrage Cycle Length')
+plt.ylabel('Number of Arbitrage Cycles')
 
 plt.yscale('log', nonposy='clip')
 
