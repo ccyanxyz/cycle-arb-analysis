@@ -1,6 +1,6 @@
 import json
 
-stats = { 'profits': [], 'revenues': [] }
+stats = { 'profits': [], 'revenues': [], 'costs': [] }
 
 with open('data/cycle_include_router.json') as f:
     for line in f:
@@ -9,4 +9,5 @@ with open('data/cycle_include_router.json') as f:
             continue
         stats['revenues'].append(info['revenue'])
         stats['profits'].append(info['revenue']-info['cost'])
-json.dump(stats, open('data/profit_revenue.json', 'w'))
+        stats['costs'].append(info['cost'])
+json.dump(stats, open('data/profit_revenue_cost.json', 'w'))
