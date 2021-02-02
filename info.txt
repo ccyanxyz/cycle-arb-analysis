@@ -4,9 +4,13 @@ end = 11731968
 
 22959997 /data/receipts_export_new
 
-1. arbitrage index
-2. daily mean revenue per tx
-3. profit/revenue/cost distribution
+fig3 expand √
+fig7 count cycle √
+count uni/sushi total txs √
+
+1. arbitrage index top10
+2. daily mean revenue per tx √
+3. profit/revenue/cost distribution √
 4. failed tx, cost distribution
 5. bot revenue / profit distribution
 6. before/after arbitrage a*b b*c c*a
