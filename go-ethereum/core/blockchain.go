@@ -21,6 +21,7 @@ import (
 	"errors"
 	"fmt"
 	"io"
+	"strconv"
 	"math/big"
 	mrand "math/rand"
 	"sort"
@@ -711,6 +712,29 @@ type Info struct {
 	Receipt types.Receipt `json:"receipt"    gencodec:"required"`
 }
 
+type bitString string
+func (b bitString) bitStringToBytes() []byte {
+    var out []byte
+    var str string
+
+    for i := len(b); i > 0; i -= 8 {
+        if i-8 < 0 {
+            str = string(b[0:i])
+        } else {
+            str = string(b[i-8 : i])
+        }
+        v, err := strconv.ParseUint(str, 2, 8)
+        if err != nil {
+            panic(err)
+        }
+        out = append([]byte{byte(v)}, out...)
+    }
+    return out
+}
+
+/*
+	Export all failed txs and receipts related to certain addresses
+*/
 func (bc *BlockChain) ExportReceiptsN(w io.Writer, first uint64, last uint64) error {
 	bc.chainmu.RLock()
 	defer bc.chainmu.RUnlock()
@@ -720,14 +744,14 @@ func (bc *BlockChain) ExportReceiptsN(w io.Writer, first uint64, last uint64) er
 	}
 	log.Info("Exporting batch of block receipts", "count", last-first+1)
 
-	sync := common.HexToHash("0x1c411e9a96e071241c2f21f7726b17ae89e3cab4c78be50e062b03a9fffbbad1")
-	//sync_topic := "0x1c411e9a96e071241c2f21f7726b17ae89e3cab4c78be50e062b03a9fffbbad1"
+	bloom_str := bitString("0b10110011110011011101111110101001111110111100101110111111100011000001111111110011111011010111101111101011010001110111010001101011101101111011111111100111111011010111111001100100001001111000100010100011101110100010111010000001111111100110101011110010001111101010010011101111111110101111000011011111110100001110111000011010111111110110010110110101110000110011111110101011100011011100111100101100011010111001011100100111010000110010101101011110111101111100011111011001011111101010111111111100111011111110101110100110010101101111011010101101110110111111110101011100110111100100100101000001111101111111101111111110001011111101110011110001101111111111001001011110111101100101000001110000101001101101101111100101111010111110000101101100111110111101110000110001111110101111110011110111011111001111110101111100101111110101001011111001110010011101010111100111110101101111111001110111011110110001000111111111111110011110011110111110111111001010101001001111110010111111111010010001101111001100110100100110010110001000100111101001101111100001100000101011110011110010000101110110111100110111000011111111110111010011001110100000111000010011110010111111010110001011011101111001001010111011111001111111001100111011011110111111101101011000111101100010001001101111111111111101011111011101010101000100101010111111111111101111111111111110111011001110000100101111110101111001101010011011011100100101111001111100101111010111100101110000110110101111111000000111010111111000101011110111001001100010100100000010111100011101001011101111000001001111111001010101101100110011100101111110011010111000001101111010110111011001100011111011001100010110111101011110011011010110111111111010111111110100111111110111110011001111110100011011011110101111110011010011111110001101110110001001001011001011111011011001110111111110101110010000111010111011010111101111111101111101001110011010101000111110110110100110001110111000010101111101001000001010110111100111101101001111101011100111111011110110011101001111110110111000100101111101011111000111111010111101111100011110110100111111101110111101")
+	bloom_bytes := bloom_str.bitStringToBytes()
+	bloom := types.BytesToBloom(bloom_bytes)
+
+	count := 0
+
 	start, reported := time.Now(), time.Now()
 	for nr := first; nr <= last; nr++ {
-		header := bc.GetHeaderByNumber(nr)
-		if !types.BloomLookup(header.Bloom, sync) {
-			continue
-		}
 		block := bc.GetBlockByNumber(nr)
 		if block == nil {
 			return fmt.Errorf("export failed on #%d: not found", nr)
@@ -737,19 +761,17 @@ func (bc *BlockChain) ExportReceiptsN(w io.Writer, first uint64, last uint64) er
 			return fmt.Errorf("export failed on #%d: receipts not found", nr)
 		}
 		for i := 0; i < len(receipts); i++ {
-			is_uni := false
-			/*if receipts[i].Status == 0 {
-				is_uni = true
-			} else*/
-			if types.BloomLookup(receipts[i].Bloom, sync) {
-				is_uni = true
+			if receipts[i].Status == 1 {
+				continue
 			}
-			if is_uni {
-				tx, _, _, _ := rawdb.ReadTransaction(bc.db, receipts[i].TxHash)
-				if tx == nil {
-					return nil
-				}
-				info := Info{*tx.TxData(), *receipts[i]}
+			tx, _, _, _ := rawdb.ReadTransaction(bc.db, receipts[i].TxHash)
+			if tx == nil {
+				return nil
+			}
+			txdata := tx.TxData()
+			if types.BloomLookup(bloom, txdata.Recipient) {
+				count += 1
+				info := Info{*txdata, *receipts[i]}
 				b, err := json.Marshal(info)
 				if err != nil {
 					return err
@@ -760,12 +782,71 @@ func (bc *BlockChain) ExportReceiptsN(w io.Writer, first uint64, last uint64) er
 		}
 	
 		if time.Since(reported) >= statsReportLimit {
-			log.Info("Exporting blocks", "exported", block.NumberU64()-first, "elapsed", common.PrettyDuration(time.Since(start)))
+			log.Info("Exporting blocks", "exported", block.NumberU64()-first, "txs", count, "elapsed", common.PrettyDuration(time.Since(start)))
 			reported = time.Now()
 		}
 	}
 	return nil
 }
+
+/**
+	Export all success txs and receipts related to uniswap/sushiswap
+*/
+// func (bc *BlockChain) ExportReceiptsN(w io.Writer, first uint64, last uint64) error {
+// 	bc.chainmu.RLock()
+// 	defer bc.chainmu.RUnlock()
+
+// 	if first > last {
+// 		return fmt.Errorf("export failed: first (%d) is greater than last (%d)", first, last)
+// 	}
+// 	log.Info("Exporting batch of block receipts", "count", last-first+1)
+
+// 	sync := common.HexToHash("0x1c411e9a96e071241c2f21f7726b17ae89e3cab4c78be50e062b03a9fffbbad1")
+// 	//sync_topic := "0x1c411e9a96e071241c2f21f7726b17ae89e3cab4c78be50e062b03a9fffbbad1"
+// 	start, reported := time.Now(), time.Now()
+// 	for nr := first; nr <= last; nr++ {
+// 		header := bc.GetHeaderByNumber(nr)
+// 		if !types.BloomLookup(header.Bloom, sync) {
+// 			continue
+// 		}
+// 		block := bc.GetBlockByNumber(nr)
+// 		if block == nil {
+// 			return fmt.Errorf("export failed on #%d: not found", nr)
+// 		}
+// 		receipts := bc.GetReceiptsByHash(block.Hash())
+// 		if receipts == nil {
+// 			return fmt.Errorf("export failed on #%d: receipts not found", nr)
+// 		}
+// 		for i := 0; i < len(receipts); i++ {
+// 			is_uni := false
+// 			/*if receipts[i].Status == 0 {
+// 				is_uni = true
+// 			} else*/
+// 			if types.BloomLookup(receipts[i].Bloom, sync) {
+// 				is_uni = true
+// 			}
+// 			if is_uni {
+// 				tx, _, _, _ := rawdb.ReadTransaction(bc.db, receipts[i].TxHash)
+// 				if tx == nil {
+// 					return nil
+// 				}
+// 				info := Info{*tx.TxData(), *receipts[i]}
+// 				b, err := json.Marshal(info)
+// 				if err != nil {
+// 					return err
+// 				}
+// 				w.Write(b)
+// 				w.Write([]byte("\n"))
+// 			}
+// 		}
+	
+// 		if time.Since(reported) >= statsReportLimit {
+// 			log.Info("Exporting blocks", "exported", block.NumberU64()-first, "elapsed", common.PrettyDuration(time.Since(start)))
+// 			reported = time.Now()
+// 		}
+// 	}
+// 	return nil
+// }
 
 // writeHeadBlock injects a new head block into the current block chain. This method
 // assumes that the block is indeed a true head. It will also reset the head
