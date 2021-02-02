@@ -1,5 +1,7 @@
 import json
+from web3.auto import w3
 
+sync_topic = "0x1c411e9a96e071241c2f21f7726b17ae89e3cab4c78be50e062b03a9fffbbad1"
 sushi_addresses = []
 uni_addresses = []
 def get_tx_info(info):
@@ -9,7 +11,7 @@ def get_tx_info(info):
     is_sushi = False
     is_uni = False
     for log in receipt['logs']:
-        if not len(log['topics']) or not log['topics'][0] == swap_topic:
+        if not len(log['topics']) or not log['topics'][0] == sync_topic:
             continue
         addr = w3.toChecksumAddress(log['address'])
         if addr in sushi_addresses:
