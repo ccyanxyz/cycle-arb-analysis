@@ -763,6 +763,9 @@ func (bc *BlockChain) ExportReceiptsN(w io.Writer, first uint64, last uint64) er
 				continue
 			}
 			receipt, _, _, _ := rawdb.ReadReceipt(bc.db, txs[i].Hash(), bc.chainConfig)
+			if receipt.Status == 1 {
+				continue
+			}
 			count += 1
 			info := Info{*txdata, *receipt}
 			b, err := json.Marshal(info)
