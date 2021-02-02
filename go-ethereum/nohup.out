@@ -24815,3 +24815,68 @@ INFO [01-29|02:56:09.110] Exporting blocks                         exported=1708
 INFO [01-29|02:56:17.126] Exporting blocks                         exported=1708699 elapsed=55h55m26.220s
 Fatal: Export error: export failed on #11709848: not found
 
+INFO [02-02|06:28:40.103] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [02-02|06:28:40.104] Smartcard socket not found, disabling    err="stat /run/pcscd/pcscd.comm: no such file or directory"
+INFO [02-02|06:28:40.122] Set global gas cap                       cap=25000000
+INFO [02-02|06:28:40.122] Allocated cache and file handles         database=/data/geth/geth/chaindata cache=512.00MiB handles=524288
+INFO [02-02|06:28:49.719] Opened ancient database                  database=/data/geth/geth/chaindata/ancient
+INFO [02-02|06:28:49.900] Disk storage enabled for ethash caches   dir=/data/geth/geth/ethash count=3
+INFO [02-02|06:28:49.900] Disk storage enabled for ethash DAGs     dir=/local/home/yanchen57/.ethash count=2
+INFO [02-02|06:28:50.184] Loaded most recent local header          number=11772893 hash="60f70b…8bf66a" td=20679102582973964784742 age=7h31m11s
+INFO [02-02|06:28:50.184] Loaded most recent local full block      number=0        hash="d4e567…cb8fa3" td=17179869184             age=51y10mo5h
+INFO [02-02|06:28:50.184] Loaded most recent local fast block      number=11772893 hash="60f70b…8bf66a" td=20679102582973964784742 age=7h31m11s
+INFO [02-02|06:28:50.193] Loaded last fast-sync pivot marker       number=11774876
+INFO [02-02|06:28:50.488] Exporting receipts                       file=/data/failed_txs
+INFO [02-02|06:28:50.509] Exporting batch of block receipts        count=1709013
+panic: strconv.ParseUint: parsing "0b": invalid syntax
+
+goroutine 1 [running]:
+github.com/ethereum/go-ethereum/core.bitString.bitStringToBytes(0x130a5c5, 0x802, 0x21, 0x3, 0xc002972cc8)
+	github.com/ethereum/go-ethereum/core/blockchain.go:728 +0x1aa
+github.com/ethereum/go-ethereum/core.(*BlockChain).ExportReceiptsN(0xc006816000, 0x1528c00, 0xc0018fe930, 0x9899c3, 0xb2ad97, 0x0, 0x0)
+	github.com/ethereum/go-ethereum/core/blockchain.go:748 +0x17b
+github.com/ethereum/go-ethereum/cmd/utils.ExportAppendReceipts(0xc006816000, 0x7ffe7afed770, 0x10, 0x9899c3, 0xb2ad97, 0x0, 0x0)
+	github.com/ethereum/go-ethereum/cmd/utils/cmd.go:255 +0x1f1
+main.exportReceipts(0xc00022a580, 0x0, 0x0)
+	github.com/ethereum/go-ethereum/cmd/geth/chaincmd.go:449 +0x3ec
+github.com/ethereum/go-ethereum/cmd/utils.MigrateFlags.func1(0xc00022a580, 0x0, 0xc00022a580)
+	github.com/ethereum/go-ethereum/cmd/utils/flags.go:1898 +0xbe
+gopkg.in/urfave/cli%2ev1.HandleAction(0x10ddee0, 0xc000291420, 0xc00022a580, 0xc000203000, 0x0)
+	gopkg.in/urfave/cli.v1@v1.20.0/app.go:490 +0xc8
+gopkg.in/urfave/cli%2ev1.Command.Run(0x12c2f6a, 0xf, 0x0, 0x0, 0x0, 0x0, 0x0, 0x12cf6f2, 0x19, 0x0, ...)
+	gopkg.in/urfave/cli.v1@v1.20.0/command.go:210 +0x9e8
+gopkg.in/urfave/cli%2ev1.(*App).Run(0xc0000a0680, 0xc000032070, 0x7, 0x7, 0x0, 0x0)
+	gopkg.in/urfave/cli.v1@v1.20.0/app.go:255 +0x741
+main.main()
+	github.com/ethereum/go-ethereum/cmd/geth/main.go:274 +0x55
+INFO [02-02|06:31:17.389] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [02-02|06:31:17.389] Smartcard socket not found, disabling    err="stat /run/pcscd/pcscd.comm: no such file or directory"
+INFO [02-02|06:31:17.390] Set global gas cap                       cap=25000000
+INFO [02-02|06:31:17.390] Allocated cache and file handles         database=/data/geth/geth/chaindata cache=512.00MiB handles=524288
+INFO [02-02|06:31:17.989] Opened ancient database                  database=/data/geth/geth/chaindata/ancient
+INFO [02-02|06:31:17.996] Disk storage enabled for ethash caches   dir=/data/geth/geth/ethash count=3
+INFO [02-02|06:31:17.996] Disk storage enabled for ethash DAGs     dir=/local/home/yanchen57/.ethash count=2
+INFO [02-02|06:31:17.997] Loaded most recent local header          number=11772893 hash="60f70b…8bf66a" td=20679102582973964784742 age=7h33m38s
+INFO [02-02|06:31:17.997] Loaded most recent local full block      number=0        hash="d4e567…cb8fa3" td=17179869184             age=51y10mo5h
+INFO [02-02|06:31:17.997] Loaded most recent local fast block      number=11772893 hash="60f70b…8bf66a" td=20679102582973964784742 age=7h33m38s
+INFO [02-02|06:31:17.997] Loaded last fast-sync pivot marker       number=11774876
+INFO [02-02|06:31:17.998] Exporting receipts                       file=/data/failed_txs
+INFO [02-02|06:31:17.998] Exporting batch of block receipts        count=1709013
+INFO [02-02|06:31:26.078] Exporting blocks                         exported=35 txs=15 elapsed=8.080s
+INFO [02-02|06:31:34.678] Exporting blocks                         exported=65 txs=25 elapsed=16.680s
+INFO [02-02|06:31:43.248] Exporting blocks                         exported=109 txs=51 elapsed=25.250s
+INFO [02-02|06:31:51.689] Exporting blocks                         exported=160 txs=78 elapsed=33.690s
+INFO [02-02|06:31:59.748] Exporting blocks                         exported=219 txs=104 elapsed=41.749s
+INFO [02-02|06:32:15.440] Exporting blocks                         exported=237 txs=113 elapsed=57.442s
+INFO [02-02|06:32:25.344] Exporting blocks                         exported=264 txs=131 elapsed=1m7.346s
+INFO [02-02|06:32:33.675] Exporting blocks                         exported=278 txs=143 elapsed=1m15.677s
+INFO [02-02|06:32:42.388] Exporting blocks                         exported=294 txs=170 elapsed=1m24.390s
+INFO [02-02|06:32:50.694] Exporting blocks                         exported=317 txs=204 elapsed=1m32.695s
+INFO [02-02|06:32:59.161] Exporting blocks                         exported=334 txs=243 elapsed=1m41.163s
+INFO [02-02|06:33:07.785] Exporting blocks                         exported=352 txs=296 elapsed=1m49.787s
+INFO [02-02|06:33:15.903] Exporting blocks                         exported=359 txs=309 elapsed=1m57.905s
+INFO [02-02|06:33:24.840] Exporting blocks                         exported=370 txs=317 elapsed=2m6.842s
+INFO [02-02|06:33:33.911] Exporting blocks                         exported=384 txs=353 elapsed=2m15.913s
+INFO [02-02|06:33:42.358] Exporting blocks                         exported=406 txs=410 elapsed=2m24.359s
+INFO [02-02|06:33:50.611] Exporting blocks                         exported=427 txs=466 elapsed=2m32.612s
+INFO [02-02|06:33:58.973] Exporting blocks                         exported=451 txs=525 elapsed=2m40.975s
