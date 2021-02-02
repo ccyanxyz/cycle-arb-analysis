@@ -19,8 +19,8 @@ wss_addr = config[network]['wss']
 
 uni = UniswapV2Client(address, privkey, http_addr)
 
-w3 = Web3(HTTPProvider(http_addr, request_kwargs={'timeout': 6000}))
-# w3 = Web3(IPCProvider('/data/geth/geth.ipc', timeout=6000))
+# w3 = Web3(HTTPProvider(http_addr, request_kwargs={'timeout': 6000}))
+w3 = Web3(IPCProvider('/data/geth/geth.ipc', timeout=6000))
 ws = Web3(WebsocketProvider(wss_addr))
 batch_provider = BatchHTTPProvider(config[network]['http'])
 # batch_provider = BatchIPCProvider('/data/geth/geth.ipc', timeout = 6000)

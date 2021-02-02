@@ -24880,3 +24880,542 @@ INFO [02-02|06:33:33.911] Exporting blocks                         exported=384 
 INFO [02-02|06:33:42.358] Exporting blocks                         exported=406 txs=410 elapsed=2m24.359s
 INFO [02-02|06:33:50.611] Exporting blocks                         exported=427 txs=466 elapsed=2m32.612s
 INFO [02-02|06:33:58.973] Exporting blocks                         exported=451 txs=525 elapsed=2m40.975s
+INFO [02-02|07:41:40.794] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [02-02|07:41:40.794] Smartcard socket not found, disabling    err="stat /run/pcscd/pcscd.comm: no such file or directory"
+INFO [02-02|07:41:40.796] Set global gas cap                       cap=25000000
+INFO [02-02|07:41:40.796] Allocated cache and file handles         database=/data/geth/geth/chaindata cache=512.00MiB handles=524288
+INFO [02-02|07:41:41.439] Opened ancient database                  database=/data/geth/geth/chaindata/ancient
+INFO [02-02|07:41:41.440] Disk storage enabled for ethash caches   dir=/data/geth/geth/ethash count=3
+INFO [02-02|07:41:41.440] Disk storage enabled for ethash DAGs     dir=/local/home/yanchen57/.ethash count=2
+INFO [02-02|07:41:41.441] Loaded most recent local header          number=11772893 hash="60f70b…8bf66a" td=20679102582973964784742 age=8h44m2s
+INFO [02-02|07:41:41.441] Loaded most recent local full block      number=0        hash="d4e567…cb8fa3" td=17179869184             age=51y10mo6h
+INFO [02-02|07:41:41.441] Loaded most recent local fast block      number=11772893 hash="60f70b…8bf66a" td=20679102582973964784742 age=8h44m2s
+INFO [02-02|07:41:41.441] Loaded last fast-sync pivot marker       number=11774876
+INFO [02-02|07:41:41.442] Exporting receipts                       file=/data/failed_txs
+INFO [02-02|07:41:41.442] Exporting batch of block receipts        count=1709013
+INFO [02-02|07:41:50.051] Exporting blocks                         exported=487 txs=629 elapsed=8.608s
+INFO [02-02|07:41:58.169] Exporting blocks                         exported=510 txs=669 elapsed=16.726s
+INFO [02-02|07:42:06.525] Exporting blocks                         exported=538 txs=681 elapsed=25.082s
+INFO [02-02|07:42:18.566] Exporting blocks                         exported=546 txs=745 elapsed=37.122s
+INFO [02-02|07:42:26.741] Exporting blocks                         exported=572 txs=754 elapsed=45.298s
+INFO [02-02|07:43:44.707] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [02-02|07:43:44.707] Smartcard socket not found, disabling    err="stat /run/pcscd/pcscd.comm: no such file or directory"
+INFO [02-02|07:43:44.709] Set global gas cap                       cap=25000000
+INFO [02-02|07:43:44.709] Allocated cache and file handles         database=/data/geth/geth/chaindata cache=512.00MiB handles=524288
+INFO [02-02|07:43:45.302] Opened ancient database                  database=/data/geth/geth/chaindata/ancient
+INFO [02-02|07:43:45.303] Disk storage enabled for ethash caches   dir=/data/geth/geth/ethash count=3
+INFO [02-02|07:43:45.303] Disk storage enabled for ethash DAGs     dir=/local/home/yanchen57/.ethash count=2
+INFO [02-02|07:43:45.304] Loaded most recent local header          number=11772893 hash="60f70b…8bf66a" td=20679102582973964784742 age=8h46m6s
+INFO [02-02|07:43:45.304] Loaded most recent local full block      number=0        hash="d4e567…cb8fa3" td=17179869184             age=51y10mo6h
+INFO [02-02|07:43:45.304] Loaded most recent local fast block      number=11772893 hash="60f70b…8bf66a" td=20679102582973964784742 age=8h46m6s
+INFO [02-02|07:43:45.304] Loaded last fast-sync pivot marker       number=11774876
+INFO [02-02|07:43:45.305] Exporting receipts                       file=/data/failed_txs
+INFO [02-02|07:43:45.305] Exporting batch of block receipts        count=1709013
+INFO [02-02|07:43:53.307] Exporting blocks                         exported=607 txs=764 elapsed=8.001s
+INFO [02-02|07:44:05.141] Exporting blocks                         exported=634 txs=802 elapsed=19.835s
+INFO [02-02|07:44:13.429] Exporting blocks                         exported=644 txs=866 elapsed=28.123s
+INFO [02-02|07:44:21.583] Exporting blocks                         exported=662 txs=876 elapsed=36.276s
+INFO [02-02|07:44:29.795] Exporting blocks                         exported=676 txs=936 elapsed=44.488s
+INFO [02-02|07:44:37.891] Exporting blocks                         exported=707 txs=940 elapsed=52.585s
+INFO [02-02|07:44:46.091] Exporting blocks                         exported=737 txs=941 elapsed=1m0.785s
+INFO [02-02|07:44:54.422] Exporting blocks                         exported=748 txs=1002 elapsed=1m9.115s
+INFO [02-02|07:45:02.517] Exporting blocks                         exported=766 txs=1044 elapsed=1m17.211s
+INFO [02-02|07:45:10.856] Exporting blocks                         exported=788 txs=1056 elapsed=1m25.550s
+INFO [02-02|07:45:19.225] Exporting blocks                         exported=800 txs=1064 elapsed=1m33.919s
+INFO [02-02|07:45:27.250] Exporting blocks                         exported=824 txs=1071 elapsed=1m41.944s
+INFO [02-02|07:45:35.259] Exporting blocks                         exported=891 txs=1185 elapsed=1m49.953s
+INFO [02-02|07:45:43.259] Exporting blocks                         exported=1023 txs=1265 elapsed=1m57.953s
+INFO [02-02|07:45:51.381] Exporting blocks                         exported=1088 txs=1411 elapsed=2m6.075s
+INFO [02-02|07:45:59.415] Exporting blocks                         exported=1149 txs=1478 elapsed=2m14.109s
+INFO [02-02|07:46:07.462] Exporting blocks                         exported=1245 txs=1509 elapsed=2m22.156s
+INFO [02-02|07:46:15.463] Exporting blocks                         exported=1335 txs=1523 elapsed=2m30.157s
+INFO [02-02|07:46:23.469] Exporting blocks                         exported=1440 txs=1547 elapsed=2m38.162s
+INFO [02-02|07:46:31.827] Exporting blocks                         exported=1517 txs=1609 elapsed=2m46.521s
+INFO [02-02|07:46:39.922] Exporting blocks                         exported=1578 txs=1700 elapsed=2m54.616s
+panic: value method github.com/ethereum/go-ethereum/common.Address.Bytes called using nil *Address pointer
+
+goroutine 1 [running]:
+github.com/ethereum/go-ethereum/common.(*Address).Bytes(0x0, 0x88e0c081cb0a511a, 0x67f3e09d6cda9919, 0xf56a3e7f636b82a4)
+	<autogenerated>:1 +0x7c
+github.com/ethereum/go-ethereum/core/types.BloomLookup(0xb1fe56fe5b79e2ab, 0x3f6dc579dbaee6b7, 0x7f6e6f9eebcf247f, 0x2f7d17f1e1f3eff1, 0xd0ebdca9b71fcade, 0x5df713039599153b, 0xac7f7ebcfbbdd338, 0xc254ebfbd573e56c, 0x85ff37f37fd7f7b8, 0x7f57be93bffef263, ...)
+	github.com/ethereum/go-ethereum/core/types/bloom9.go:159 +0x4c
+github.com/ethereum/go-ethereum/core.(*BlockChain).ExportReceiptsN(0xc0000b4580, 0x1528460, 0xc000682ca8, 0x9899c3, 0xb2ad97, 0x0, 0x0)
+	github.com/ethereum/go-ethereum/core/blockchain.go:769 +0x39f
+github.com/ethereum/go-ethereum/cmd/utils.ExportAppendReceipts(0xc0000b4580, 0x7ffef5369770, 0x10, 0x9899c3, 0xb2ad97, 0x0, 0x0)
+	github.com/ethereum/go-ethereum/cmd/utils/cmd.go:255 +0x1f1
+main.exportReceipts(0xc0002a02c0, 0x0, 0x0)
+	github.com/ethereum/go-ethereum/cmd/geth/chaincmd.go:449 +0x3ec
+github.com/ethereum/go-ethereum/cmd/utils.MigrateFlags.func1(0xc0002a02c0, 0x0, 0xc0002a02c0)
+	github.com/ethereum/go-ethereum/cmd/utils/flags.go:1898 +0xbe
+gopkg.in/urfave/cli%2ev1.HandleAction(0x10ddec0, 0xc0002113e0, 0xc0002a02c0, 0xc00023ce00, 0x0)
+	gopkg.in/urfave/cli.v1@v1.20.0/app.go:490 +0xc8
+gopkg.in/urfave/cli%2ev1.Command.Run(0x12c2f4a, 0xf, 0x0, 0x0, 0x0, 0x0, 0x0, 0x12cf6d2, 0x19, 0x0, ...)
+	gopkg.in/urfave/cli.v1@v1.20.0/command.go:210 +0x9e8
+gopkg.in/urfave/cli%2ev1.(*App).Run(0xc0000a01a0, 0xc000032070, 0x7, 0x7, 0x0, 0x0)
+	gopkg.in/urfave/cli.v1@v1.20.0/app.go:255 +0x741
+main.main()
+	github.com/ethereum/go-ethereum/cmd/geth/main.go:274 +0x55
+INFO [02-02|08:09:36.601] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [02-02|08:09:36.601] Smartcard socket not found, disabling    err="stat /run/pcscd/pcscd.comm: no such file or directory"
+INFO [02-02|08:09:36.602] Set global gas cap                       cap=25000000
+INFO [02-02|08:09:36.602] Allocated cache and file handles         database=/data/geth/geth/chaindata cache=512.00MiB handles=524288
+INFO [02-02|08:09:37.252] Opened ancient database                  database=/data/geth/geth/chaindata/ancient
+INFO [02-02|08:09:37.253] Disk storage enabled for ethash caches   dir=/data/geth/geth/ethash count=3
+INFO [02-02|08:09:37.253] Disk storage enabled for ethash DAGs     dir=/local/home/yanchen57/.ethash count=2
+INFO [02-02|08:09:37.254] Loaded most recent local header          number=11772893 hash="60f70b…8bf66a" td=20679102582973964784742 age=9h11m58s
+INFO [02-02|08:09:37.254] Loaded most recent local full block      number=0        hash="d4e567…cb8fa3" td=17179869184             age=51y10mo7h
+INFO [02-02|08:09:37.254] Loaded most recent local fast block      number=11772893 hash="60f70b…8bf66a" td=20679102582973964784742 age=9h11m58s
+INFO [02-02|08:09:37.254] Loaded last fast-sync pivot marker       number=11774876
+INFO [02-02|08:09:37.255] Exporting receipts                       file=/data/failed_txs
+INFO [02-02|08:09:37.255] Exporting batch of block receipts        count=1709013
+panic: runtime error: invalid memory address or nil pointer dereference
+[signal SIGSEGV: segmentation violation code=0x1 addr=0x0 pc=0x99712b]
+
+goroutine 1 [running]:
+github.com/ethereum/go-ethereum/core.(*BlockChain).ExportReceiptsN(0xc0000b4580, 0x1528340, 0xc000280d70, 0x9899c3, 0xb2ad97, 0x0, 0x0)
+	github.com/ethereum/go-ethereum/core/blockchain.go:765 +0x37b
+github.com/ethereum/go-ethereum/cmd/utils.ExportAppendReceipts(0xc0000b4580, 0x7ffd8df17770, 0x10, 0x9899c3, 0xb2ad97, 0x0, 0x0)
+	github.com/ethereum/go-ethereum/cmd/utils/cmd.go:255 +0x1f1
+main.exportReceipts(0xc0002902c0, 0x0, 0x0)
+	github.com/ethereum/go-ethereum/cmd/geth/chaincmd.go:449 +0x3ec
+github.com/ethereum/go-ethereum/cmd/utils.MigrateFlags.func1(0xc0002902c0, 0x0, 0xc0002902c0)
+	github.com/ethereum/go-ethereum/cmd/utils/flags.go:1898 +0xbe
+gopkg.in/urfave/cli%2ev1.HandleAction(0x10ddda0, 0xc0001cdf00, 0xc0002902c0, 0xc00010f000, 0x0)
+	gopkg.in/urfave/cli.v1@v1.20.0/app.go:490 +0xc8
+gopkg.in/urfave/cli%2ev1.Command.Run(0x12c2e2a, 0xf, 0x0, 0x0, 0x0, 0x0, 0x0, 0x12cf5b2, 0x19, 0x0, ...)
+	gopkg.in/urfave/cli.v1@v1.20.0/command.go:210 +0x9e8
+gopkg.in/urfave/cli%2ev1.(*App).Run(0xc00065e4e0, 0xc000032070, 0x7, 0x7, 0x0, 0x0)
+	gopkg.in/urfave/cli.v1@v1.20.0/app.go:255 +0x741
+main.main()
+	github.com/ethereum/go-ethereum/cmd/geth/main.go:274 +0x55
+INFO [02-02|08:13:51.107] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [02-02|08:13:51.107] Smartcard socket not found, disabling    err="stat /run/pcscd/pcscd.comm: no such file or directory"
+INFO [02-02|08:13:51.109] Set global gas cap                       cap=25000000
+INFO [02-02|08:13:51.109] Allocated cache and file handles         database=/data/geth/geth/chaindata cache=512.00MiB handles=524288
+INFO [02-02|08:13:51.715] Opened ancient database                  database=/data/geth/geth/chaindata/ancient
+INFO [02-02|08:13:51.716] Disk storage enabled for ethash caches   dir=/data/geth/geth/ethash count=3
+INFO [02-02|08:13:51.716] Disk storage enabled for ethash DAGs     dir=/local/home/yanchen57/.ethash count=2
+INFO [02-02|08:13:51.717] Loaded most recent local header          number=11772893 hash="60f70b…8bf66a" td=20679102582973964784742 age=9h16m12s
+INFO [02-02|08:13:51.717] Loaded most recent local full block      number=0        hash="d4e567…cb8fa3" td=17179869184             age=51y10mo7h
+INFO [02-02|08:13:51.717] Loaded most recent local fast block      number=11772893 hash="60f70b…8bf66a" td=20679102582973964784742 age=9h16m12s
+INFO [02-02|08:13:51.717] Loaded last fast-sync pivot marker       number=11774876
+INFO [02-02|08:13:51.718] Exporting receipts                       file=/data/failed_txs
+INFO [02-02|08:13:51.718] Exporting batch of block receipts        count=1709013
+INFO [02-02|08:14:00.076] Exporting blocks                         exported=11 txs=465 elapsed=8.357s
+INFO [02-02|08:14:08.321] Exporting blocks                         exported=30 txs=898 elapsed=16.601s
+INFO [02-02|08:14:16.767] Exporting blocks                         exported=51 txs=1377 elapsed=25.047s
+INFO [02-02|08:14:24.812] Exporting blocks                         exported=68 txs=1802 elapsed=33.092s
+INFO [02-02|08:14:33.004] Exporting blocks                         exported=81 txs=2255 elapsed=41.285s
+INFO [02-02|08:14:41.190] Exporting blocks                         exported=102 txs=2698 elapsed=49.470s
+INFO [02-02|08:14:49.254] Exporting blocks                         exported=115 txs=3155 elapsed=57.535s
+INFO [02-02|08:14:57.623] Exporting blocks                         exported=131 txs=3614 elapsed=1m5.903s
+INFO [02-02|08:15:05.775] Exporting blocks                         exported=158 txs=4096 elapsed=1m14.056s
+INFO [02-02|08:15:14.019] Exporting blocks                         exported=180 txs=4578 elapsed=1m22.300s
+INFO [02-02|08:15:22.081] Exporting blocks                         exported=199 txs=5058 elapsed=1m30.362s
+INFO [02-02|08:15:30.114] Exporting blocks                         exported=223 txs=5541 elapsed=1m38.394s
+INFO [02-02|08:15:38.414] Exporting blocks                         exported=252 txs=6055 elapsed=1m46.695s
+INFO [02-02|08:15:46.717] Exporting blocks                         exported=269 txs=6563 elapsed=1m54.998s
+INFO [02-02|08:15:54.722] Exporting blocks                         exported=293 txs=7116 elapsed=2m3.003s
+INFO [02-02|08:16:03.411] Exporting blocks                         exported=317 txs=7646 elapsed=2m11.691s
+INFO [02-02|08:16:11.576] Exporting blocks                         exported=332 txs=8153 elapsed=2m19.857s
+INFO [02-02|08:16:19.812] Exporting blocks                         exported=353 txs=8715 elapsed=2m28.092s
+INFO [02-02|08:16:28.899] Exporting blocks                         exported=366 txs=9339 elapsed=2m37.180s
+INFO [02-02|08:16:37.392] Exporting blocks                         exported=380 txs=9978 elapsed=2m45.673s
+INFO [02-02|08:16:45.546] Exporting blocks                         exported=403 txs=10501 elapsed=2m53.827s
+INFO [02-02|08:16:53.593] Exporting blocks                         exported=434 txs=11015 elapsed=3m1.873s
+INFO [02-02|08:17:01.654] Exporting blocks                         exported=468 txs=11566 elapsed=3m9.935s
+INFO [02-02|08:17:10.008] Exporting blocks                         exported=497 txs=12128 elapsed=3m18.289s
+INFO [02-02|08:17:18.027] Exporting blocks                         exported=524 txs=12716 elapsed=3m26.308s
+INFO [02-02|08:17:26.107] Exporting blocks                         exported=552 txs=13312 elapsed=3m34.388s
+INFO [02-02|08:17:34.224] Exporting blocks                         exported=590 txs=13844 elapsed=3m42.505s
+INFO [02-02|08:17:43.523] Exporting blocks                         exported=634 txs=14525 elapsed=3m51.803s
+INFO [02-02|08:17:51.845] Exporting blocks                         exported=663 txs=15152 elapsed=4m0.126s
+INFO [02-02|08:18:00.005] Exporting blocks                         exported=690 txs=15784 elapsed=4m8.285s
+INFO [02-02|08:18:08.146] Exporting blocks                         exported=729 txs=16324 elapsed=4m16.427s
+INFO [02-02|08:18:16.372] Exporting blocks                         exported=754 txs=16997 elapsed=4m24.653s
+INFO [02-02|08:18:24.538] Exporting blocks                         exported=788 txs=17574 elapsed=4m32.818s
+INFO [02-02|08:18:33.084] Exporting blocks                         exported=824 txs=18205 elapsed=4m41.365s
+INFO [02-02|08:18:41.344] Exporting blocks                         exported=854 txs=18787 elapsed=4m49.625s
+INFO [02-02|08:18:49.411] Exporting blocks                         exported=882 txs=19478 elapsed=4m57.691s
+INFO [02-02|08:18:57.459] Exporting blocks                         exported=927 txs=20079 elapsed=5m5.739s
+INFO [02-02|08:19:05.500] Exporting blocks                         exported=958 txs=20691 elapsed=5m13.780s
+INFO [02-02|08:19:13.757] Exporting blocks                         exported=988 txs=21174 elapsed=5m22.037s
+INFO [02-02|08:19:21.907] Exporting blocks                         exported=1021 txs=21698 elapsed=5m30.188s
+INFO [02-02|08:19:30.541] Exporting blocks                         exported=1048 txs=22228 elapsed=5m38.822s
+INFO [02-02|08:19:38.829] Exporting blocks                         exported=1070 txs=22862 elapsed=5m47.110s
+INFO [02-02|08:19:46.864] Exporting blocks                         exported=1092 txs=23366 elapsed=5m55.145s
+INFO [02-02|08:19:54.907] Exporting blocks                         exported=1117 txs=23868 elapsed=6m3.188s
+INFO [02-02|08:20:03.626] Exporting blocks                         exported=1142 txs=24475 elapsed=6m11.906s
+INFO [02-02|08:20:12.153] Exporting blocks                         exported=1170 txs=25050 elapsed=6m20.434s
+INFO [02-02|08:20:20.269] Exporting blocks                         exported=1204 txs=25572 elapsed=6m28.550s
+INFO [02-02|08:20:29.144] Exporting blocks                         exported=1234 txs=26140 elapsed=6m37.424s
+INFO [02-02|08:20:37.208] Exporting blocks                         exported=1271 txs=26697 elapsed=6m45.489s
+INFO [02-02|08:20:45.238] Exporting blocks                         exported=1304 txs=27238 elapsed=6m53.518s
+INFO [02-02|08:20:53.536] Exporting blocks                         exported=1345 txs=27761 elapsed=7m1.817s
+INFO [02-02|08:21:01.800] Exporting blocks                         exported=1375 txs=28318 elapsed=7m10.081s
+INFO [02-02|08:21:09.983] Exporting blocks                         exported=1410 txs=28864 elapsed=7m18.264s
+INFO [02-02|08:21:18.145] Exporting blocks                         exported=1455 txs=29454 elapsed=7m26.426s
+INFO [02-02|08:21:26.304] Exporting blocks                         exported=1488 txs=30054 elapsed=7m34.584s
+INFO [02-02|08:21:34.387] Exporting blocks                         exported=1523 txs=30602 elapsed=7m42.668s
+INFO [02-02|08:21:42.442] Exporting blocks                         exported=1560 txs=31182 elapsed=7m50.723s
+INFO [02-02|08:21:50.740] Exporting blocks                         exported=1590 txs=31839 elapsed=7m59.020s
+INFO [02-02|08:21:58.741] Exporting blocks                         exported=1620 txs=32397 elapsed=8m7.021s
+INFO [02-02|08:22:06.961] Exporting blocks                         exported=1659 txs=32950 elapsed=8m15.242s
+INFO [02-02|08:22:14.964] Exporting blocks                         exported=1702 txs=33552 elapsed=8m23.245s
+INFO [02-02|08:22:23.437] Exporting blocks                         exported=1750 txs=34195 elapsed=8m31.718s
+INFO [02-02|08:22:31.513] Exporting blocks                         exported=1790 txs=34763 elapsed=8m39.794s
+INFO [02-02|08:22:39.669] Exporting blocks                         exported=1827 txs=35301 elapsed=8m47.949s
+INFO [02-02|08:22:47.829] Exporting blocks                         exported=1865 txs=35892 elapsed=8m56.110s
+INFO [02-02|08:22:55.860] Exporting blocks                         exported=1899 txs=36487 elapsed=9m4.140s
+INFO [02-02|08:23:04.519] Exporting blocks                         exported=1928 txs=37159 elapsed=9m12.800s
+INFO [02-02|08:23:14.553] Exporting blocks                         exported=1949 txs=37856 elapsed=9m22.834s
+INFO [02-02|08:23:23.920] Exporting blocks                         exported=1960 txs=38562 elapsed=9m32.200s
+INFO [02-02|08:23:31.976] Exporting blocks                         exported=1993 txs=39143 elapsed=9m40.256s
+INFO [02-02|08:23:40.103] Exporting blocks                         exported=2022 txs=39758 elapsed=9m48.384s
+INFO [02-02|08:23:48.178] Exporting blocks                         exported=2047 txs=40340 elapsed=9m56.459s
+INFO [02-02|08:23:56.311] Exporting blocks                         exported=2067 txs=40918 elapsed=10m4.591s
+INFO [02-02|08:24:04.673] Exporting blocks                         exported=2091 txs=41512 elapsed=10m12.954s
+INFO [02-02|08:24:13.134] Exporting blocks                         exported=2121 txs=42058 elapsed=10m21.415s
+INFO [02-02|08:24:21.335] Exporting blocks                         exported=2141 txs=42579 elapsed=10m29.616s
+INFO [02-02|08:24:29.438] Exporting blocks                         exported=2167 txs=43119 elapsed=10m37.719s
+INFO [02-02|08:24:37.681] Exporting blocks                         exported=2187 txs=43658 elapsed=10m45.961s
+INFO [02-02|08:24:46.008] Exporting blocks                         exported=2201 txs=44164 elapsed=10m54.289s
+INFO [02-02|08:24:54.153] Exporting blocks                         exported=2221 txs=44771 elapsed=11m2.434s
+INFO [02-02|08:25:02.580] Exporting blocks                         exported=2256 txs=45398 elapsed=11m10.861s
+INFO [02-02|08:25:10.727] Exporting blocks                         exported=2290 txs=45888 elapsed=11m19.008s
+INFO [02-02|08:25:18.905] Exporting blocks                         exported=2314 txs=46400 elapsed=11m27.185s
+INFO [02-02|08:25:27.489] Exporting blocks                         exported=2338 txs=46979 elapsed=11m35.770s
+INFO [02-02|08:25:35.665] Exporting blocks                         exported=2359 txs=47456 elapsed=11m43.946s
+INFO [02-02|08:25:44.072] Exporting blocks                         exported=2381 txs=47952 elapsed=11m52.352s
+INFO [02-02|08:25:53.394] Exporting blocks                         exported=2414 txs=48578 elapsed=12m1.674s
+INFO [02-02|08:26:01.530] Exporting blocks                         exported=2434 txs=49126 elapsed=12m9.810s
+INFO [02-02|08:26:09.922] Exporting blocks                         exported=2454 txs=49623 elapsed=12m18.202s
+INFO [02-02|08:26:18.159] Exporting blocks                         exported=2472 txs=50091 elapsed=12m26.440s
+INFO [02-02|08:26:26.268] Exporting blocks                         exported=2491 txs=50595 elapsed=12m34.549s
+INFO [02-02|08:26:34.663] Exporting blocks                         exported=2510 txs=51072 elapsed=12m42.944s
+INFO [02-02|08:26:43.472] Exporting blocks                         exported=2533 txs=51542 elapsed=12m51.752s
+INFO [02-02|08:26:52.046] Exporting blocks                         exported=2548 txs=51978 elapsed=13m0.326s
+INFO [02-02|08:27:00.278] Exporting blocks                         exported=2566 txs=52399 elapsed=13m8.559s
+INFO [02-02|08:27:08.613] Exporting blocks                         exported=2588 txs=52934 elapsed=13m16.893s
+INFO [02-02|08:27:17.115] Exporting blocks                         exported=2609 txs=53435 elapsed=13m25.395s
+INFO [02-02|08:27:25.237] Exporting blocks                         exported=2628 txs=53915 elapsed=13m33.517s
+INFO [02-02|08:27:34.053] Exporting blocks                         exported=2655 txs=54449 elapsed=13m42.334s
+INFO [02-02|08:27:42.216] Exporting blocks                         exported=2671 txs=54967 elapsed=13m50.496s
+INFO [02-02|08:27:51.336] Exporting blocks                         exported=2693 txs=55494 elapsed=13m59.617s
+INFO [02-02|08:27:59.383] Exporting blocks                         exported=2709 txs=55927 elapsed=14m7.664s
+INFO [02-02|08:28:07.850] Exporting blocks                         exported=2738 txs=56476 elapsed=14m16.131s
+INFO [02-02|08:28:16.190] Exporting blocks                         exported=2762 txs=56881 elapsed=14m24.471s
+INFO [02-02|08:28:51.099] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [02-02|08:28:51.099] Smartcard socket not found, disabling    err="stat /run/pcscd/pcscd.comm: no such file or directory"
+INFO [02-02|08:28:51.100] Set global gas cap                       cap=25000000
+INFO [02-02|08:28:51.100] Allocated cache and file handles         database=/data/geth/geth/chaindata cache=512.00MiB handles=524288
+INFO [02-02|08:28:51.696] Opened ancient database                  database=/data/geth/geth/chaindata/ancient
+INFO [02-02|08:28:51.696] Disk storage enabled for ethash caches   dir=/data/geth/geth/ethash count=3
+INFO [02-02|08:28:51.697] Disk storage enabled for ethash DAGs     dir=/local/home/yanchen57/.ethash count=2
+INFO [02-02|08:28:51.698] Loaded most recent local header          number=11772893 hash="60f70b…8bf66a" td=20679102582973964784742 age=9h31m12s
+INFO [02-02|08:28:51.698] Loaded most recent local full block      number=0        hash="d4e567…cb8fa3" td=17179869184             age=51y10mo7h
+INFO [02-02|08:28:51.698] Loaded most recent local fast block      number=11772893 hash="60f70b…8bf66a" td=20679102582973964784742 age=9h31m12s
+INFO [02-02|08:28:51.698] Loaded last fast-sync pivot marker       number=11774876
+INFO [02-02|08:28:51.698] Exporting receipts                       file=/data/failed_txs
+INFO [02-02|08:28:51.698] Exporting batch of block receipts        count=1709013
+INFO [02-02|08:28:59.727] Exporting blocks                         exported=139 txs=134 elapsed=8.028s
+INFO [02-02|08:29:07.741] Exporting blocks                         exported=326 txs=310 elapsed=16.041s
+INFO [02-02|08:29:15.794] Exporting blocks                         exported=501 txs=665 elapsed=24.094s
+INFO [02-02|08:29:23.967] Exporting blocks                         exported=745 txs=966 elapsed=32.267s
+INFO [02-02|08:29:31.972] Exporting blocks                         exported=974 txs=1254 elapsed=40.272s
+INFO [02-02|08:29:39.994] Exporting blocks                         exported=1186 txs=1493 elapsed=48.294s
+INFO [02-02|08:29:48.004] Exporting blocks                         exported=1459 txs=1549 elapsed=56.304s
+INFO [02-02|08:29:56.013] Exporting blocks                         exported=1713 txs=1736 elapsed=1m4.313s
+INFO [02-02|08:30:04.027] Exporting blocks                         exported=1958 txs=2048 elapsed=1m12.327s
+INFO [02-02|08:30:12.034] Exporting blocks                         exported=2154 txs=2196 elapsed=1m20.334s
+INFO [02-02|08:30:20.035] Exporting blocks                         exported=2343 txs=2289 elapsed=1m28.335s
+INFO [02-02|08:30:28.075] Exporting blocks                         exported=2521 txs=2321 elapsed=1m36.375s
+INFO [02-02|08:30:36.076] Exporting blocks                         exported=2680 txs=2373 elapsed=1m44.377s
+INFO [02-02|08:30:44.113] Exporting blocks                         exported=2793 txs=2394 elapsed=1m52.413s
+INFO [02-02|08:30:52.123] Exporting blocks                         exported=2817 txs=2401 elapsed=2m0.423s
+INFO [02-02|08:31:00.136] Exporting blocks                         exported=2844 txs=2409 elapsed=2m8.436s
+INFO [02-02|08:31:08.240] Exporting blocks                         exported=2880 txs=2411 elapsed=2m16.540s
+INFO [02-02|08:31:16.463] Exporting blocks                         exported=2912 txs=2415 elapsed=2m24.764s
+INFO [02-02|08:31:24.556] Exporting blocks                         exported=2952 txs=2427 elapsed=2m32.856s
+INFO [02-02|08:31:33.485] Exporting blocks                         exported=2989 txs=2431 elapsed=2m41.786s
+INFO [02-02|08:31:41.653] Exporting blocks                         exported=3016 txs=2432 elapsed=2m49.953s
+INFO [02-02|08:31:49.858] Exporting blocks                         exported=3050 txs=2447 elapsed=2m58.159s
+INFO [02-02|08:31:58.050] Exporting blocks                         exported=3080 txs=2456 elapsed=3m6.350s
+INFO [02-02|08:32:06.486] Exporting blocks                         exported=3119 txs=2459 elapsed=3m14.786s
+INFO [02-02|08:32:14.565] Exporting blocks                         exported=3158 txs=2463 elapsed=3m22.865s
+INFO [02-02|08:32:22.875] Exporting blocks                         exported=3198 txs=2475 elapsed=3m31.175s
+INFO [02-02|08:32:30.936] Exporting blocks                         exported=3235 txs=2481 elapsed=3m39.237s
+INFO [02-02|08:32:39.037] Exporting blocks                         exported=3269 txs=2483 elapsed=3m47.337s
+INFO [02-02|08:32:47.125] Exporting blocks                         exported=3304 txs=2517 elapsed=3m55.425s
+INFO [02-02|08:32:55.296] Exporting blocks                         exported=3344 txs=2528 elapsed=4m3.597s
+INFO [02-02|08:33:03.372] Exporting blocks                         exported=3377 txs=2539 elapsed=4m11.672s
+INFO [02-02|08:33:11.634] Exporting blocks                         exported=3411 txs=2564 elapsed=4m19.935s
+INFO [02-02|08:33:19.774] Exporting blocks                         exported=3451 txs=2614 elapsed=4m28.075s
+INFO [02-02|08:33:27.935] Exporting blocks                         exported=3494 txs=2630 elapsed=4m36.235s
+INFO [02-02|08:33:36.025] Exporting blocks                         exported=3532 txs=2633 elapsed=4m44.325s
+INFO [02-02|08:33:44.040] Exporting blocks                         exported=3574 txs=2642 elapsed=4m52.340s
+INFO [02-02|08:33:52.086] Exporting blocks                         exported=3618 txs=2645 elapsed=5m0.386s
+INFO [02-02|08:34:00.365] Exporting blocks                         exported=3659 txs=2649 elapsed=5m8.666s
+INFO [02-02|08:34:08.574] Exporting blocks                         exported=3707 txs=2661 elapsed=5m16.874s
+INFO [02-02|08:34:16.603] Exporting blocks                         exported=3746 txs=2665 elapsed=5m24.903s
+INFO [02-02|08:34:24.704] Exporting blocks                         exported=3786 txs=2671 elapsed=5m33.004s
+INFO [02-02|08:34:32.711] Exporting blocks                         exported=3829 txs=2677 elapsed=5m41.011s
+INFO [02-02|08:34:40.791] Exporting blocks                         exported=3870 txs=2685 elapsed=5m49.091s
+INFO [02-02|08:34:48.854] Exporting blocks                         exported=3914 txs=2717 elapsed=5m57.154s
+INFO [02-02|08:34:57.027] Exporting blocks                         exported=3951 txs=2732 elapsed=6m5.327s
+INFO [02-02|08:35:05.337] Exporting blocks                         exported=3988 txs=2738 elapsed=6m13.637s
+INFO [02-02|08:35:13.697] Exporting blocks                         exported=4021 txs=2750 elapsed=6m21.998s
+INFO [02-02|08:35:21.747] Exporting blocks                         exported=4047 txs=2758 elapsed=6m30.047s
+INFO [02-02|08:35:29.812] Exporting blocks                         exported=4075 txs=2791 elapsed=6m38.112s
+INFO [02-02|08:35:37.867] Exporting blocks                         exported=4114 txs=2875 elapsed=6m46.168s
+INFO [02-02|08:35:45.978] Exporting blocks                         exported=4145 txs=2880 elapsed=6m54.278s
+INFO [02-02|08:35:54.063] Exporting blocks                         exported=4170 txs=2888 elapsed=7m2.363s
+INFO [02-02|08:36:02.202] Exporting blocks                         exported=4209 txs=2893 elapsed=7m10.502s
+INFO [02-02|08:36:10.334] Exporting blocks                         exported=4251 txs=2898 elapsed=7m18.634s
+INFO [02-02|08:36:18.378] Exporting blocks                         exported=4291 txs=2906 elapsed=7m26.678s
+INFO [02-02|08:36:26.521] Exporting blocks                         exported=4326 txs=2911 elapsed=7m34.822s
+INFO [02-02|08:36:34.705] Exporting blocks                         exported=4362 txs=2916 elapsed=7m43.005s
+INFO [02-02|08:36:42.943] Exporting blocks                         exported=4397 txs=2934 elapsed=7m51.243s
+INFO [02-02|08:36:51.156] Exporting blocks                         exported=4439 txs=2942 elapsed=7m59.456s
+INFO [02-02|08:36:59.485] Exporting blocks                         exported=4473 txs=2945 elapsed=8m7.785s
+INFO [02-02|08:37:07.570] Exporting blocks                         exported=4502 txs=2955 elapsed=8m15.871s
+INFO [02-02|08:37:15.632] Exporting blocks                         exported=4526 txs=2964 elapsed=8m23.932s
+INFO [02-02|08:37:23.708] Exporting blocks                         exported=4565 txs=2971 elapsed=8m32.008s
+INFO [02-02|08:37:31.724] Exporting blocks                         exported=4601 txs=2975 elapsed=8m40.024s
+INFO [02-02|08:37:39.815] Exporting blocks                         exported=4646 txs=2981 elapsed=8m48.115s
+INFO [02-02|08:37:47.861] Exporting blocks                         exported=4680 txs=2986 elapsed=8m56.162s
+INFO [02-02|08:37:55.889] Exporting blocks                         exported=4718 txs=2998 elapsed=9m4.189s
+INFO [02-02|08:38:04.082] Exporting blocks                         exported=4752 txs=3013 elapsed=9m12.382s
+INFO [02-02|08:38:12.119] Exporting blocks                         exported=4791 txs=3031 elapsed=9m20.419s
+INFO [02-02|08:38:20.394] Exporting blocks                         exported=4837 txs=3041 elapsed=9m28.694s
+INFO [02-02|08:38:28.416] Exporting blocks                         exported=4871 txs=3044 elapsed=9m36.716s
+INFO [02-02|08:38:36.441] Exporting blocks                         exported=4908 txs=3050 elapsed=9m44.741s
+INFO [02-02|08:38:44.801] Exporting blocks                         exported=4950 txs=3082 elapsed=9m53.101s
+INFO [02-02|08:38:52.858] Exporting blocks                         exported=4986 txs=3094 elapsed=10m1.158s
+INFO [02-02|08:39:00.968] Exporting blocks                         exported=5025 txs=3102 elapsed=10m9.268s
+INFO [02-02|08:39:09.255] Exporting blocks                         exported=5058 txs=3135 elapsed=10m17.556s
+INFO [02-02|08:39:17.420] Exporting blocks                         exported=5096 txs=3138 elapsed=10m25.720s
+INFO [02-02|08:39:25.466] Exporting blocks                         exported=5133 txs=3144 elapsed=10m33.766s
+INFO [02-02|08:39:33.701] Exporting blocks                         exported=5182 txs=3150 elapsed=10m42.001s
+INFO [02-02|08:39:41.825] Exporting blocks                         exported=5225 txs=3155 elapsed=10m50.125s
+INFO [02-02|08:39:50.028] Exporting blocks                         exported=5259 txs=3190 elapsed=10m58.328s
+INFO [02-02|08:39:58.240] Exporting blocks                         exported=5293 txs=3205 elapsed=11m6.540s
+INFO [02-02|08:40:06.352] Exporting blocks                         exported=5329 txs=3250 elapsed=11m14.652s
+INFO [02-02|08:40:14.461] Exporting blocks                         exported=5373 txs=3274 elapsed=11m22.761s
+INFO [02-02|08:40:22.565] Exporting blocks                         exported=5410 txs=3281 elapsed=11m30.865s
+INFO [02-02|08:40:30.693] Exporting blocks                         exported=5447 txs=3318 elapsed=11m38.993s
+INFO [02-02|08:40:38.711] Exporting blocks                         exported=5491 txs=3325 elapsed=11m47.011s
+INFO [02-02|08:40:46.941] Exporting blocks                         exported=5522 txs=3332 elapsed=11m55.242s
+INFO [02-02|08:40:55.041] Exporting blocks                         exported=5570 txs=3344 elapsed=12m3.341s
+INFO [02-02|08:41:03.087] Exporting blocks                         exported=5605 txs=3352 elapsed=12m11.388s
+INFO [02-02|08:41:11.106] Exporting blocks                         exported=5645 txs=3361 elapsed=12m19.406s
+INFO [02-02|08:41:19.243] Exporting blocks                         exported=5684 txs=3368 elapsed=12m27.543s
+INFO [02-02|08:41:27.347] Exporting blocks                         exported=5722 txs=3376 elapsed=12m35.647s
+INFO [02-02|08:41:35.584] Exporting blocks                         exported=5759 txs=3384 elapsed=12m43.884s
+INFO [02-02|08:41:43.747] Exporting blocks                         exported=5797 txs=3388 elapsed=12m52.047s
+INFO [02-02|08:41:52.024] Exporting blocks                         exported=5835 txs=3391 elapsed=13m0.324s
+INFO [02-02|08:42:00.027] Exporting blocks                         exported=5876 txs=3394 elapsed=13m8.327s
+INFO [02-02|08:42:08.417] Exporting blocks                         exported=5923 txs=3400 elapsed=13m16.717s
+INFO [02-02|08:42:16.455] Exporting blocks                         exported=5969 txs=3406 elapsed=13m24.755s
+INFO [02-02|08:42:24.530] Exporting blocks                         exported=6014 txs=3412 elapsed=13m32.830s
+INFO [02-02|08:42:32.649] Exporting blocks                         exported=6041 txs=3459 elapsed=13m40.949s
+INFO [02-02|08:42:40.743] Exporting blocks                         exported=6071 txs=3521 elapsed=13m49.043s
+INFO [02-02|08:42:49.507] Exporting blocks                         exported=6104 txs=3544 elapsed=13m57.807s
+INFO [02-02|08:42:57.600] Exporting blocks                         exported=6130 txs=3633 elapsed=14m5.900s
+INFO [02-02|08:43:05.957] Exporting blocks                         exported=6167 txs=3653 elapsed=14m14.257s
+INFO [02-02|08:43:14.010] Exporting blocks                         exported=6192 txs=3757 elapsed=14m22.311s
+INFO [02-02|08:43:22.041] Exporting blocks                         exported=6223 txs=3789 elapsed=14m30.341s
+INFO [02-02|08:43:30.048] Exporting blocks                         exported=6251 txs=3795 elapsed=14m38.348s
+INFO [02-02|08:43:38.221] Exporting blocks                         exported=6283 txs=3824 elapsed=14m46.521s
+INFO [02-02|08:43:46.238] Exporting blocks                         exported=6320 txs=3867 elapsed=14m54.538s
+INFO [02-02|08:43:54.354] Exporting blocks                         exported=6356 txs=3879 elapsed=15m2.654s
+INFO [02-02|08:44:02.374] Exporting blocks                         exported=6392 txs=3885 elapsed=15m10.675s
+INFO [02-02|08:44:10.427] Exporting blocks                         exported=6436 txs=3897 elapsed=15m18.727s
+INFO [02-02|08:44:18.660] Exporting blocks                         exported=6478 txs=3915 elapsed=15m26.960s
+INFO [02-02|08:44:26.814] Exporting blocks                         exported=6524 txs=3923 elapsed=15m35.114s
+INFO [02-02|08:44:35.112] Exporting blocks                         exported=6575 txs=3941 elapsed=15m43.412s
+INFO [02-02|08:44:43.133] Exporting blocks                         exported=6608 txs=3995 elapsed=15m51.433s
+INFO [02-02|08:44:51.431] Exporting blocks                         exported=6661 txs=4013 elapsed=15m59.732s
+INFO [02-02|08:44:59.432] Exporting blocks                         exported=6708 txs=4018 elapsed=16m7.732s
+INFO [02-02|08:45:07.650] Exporting blocks                         exported=6761 txs=4024 elapsed=16m15.950s
+INFO [02-02|08:45:15.711] Exporting blocks                         exported=6813 txs=4041 elapsed=16m24.012s
+INFO [02-02|08:45:23.848] Exporting blocks                         exported=6861 txs=4063 elapsed=16m32.148s
+INFO [02-02|08:45:32.312] Exporting blocks                         exported=6909 txs=4080 elapsed=16m40.612s
+INFO [02-02|08:45:40.533] Exporting blocks                         exported=6942 txs=4142 elapsed=16m48.833s
+INFO [02-02|08:45:48.586] Exporting blocks                         exported=6980 txs=4221 elapsed=16m56.886s
+INFO [02-02|08:45:56.636] Exporting blocks                         exported=7019 txs=4223 elapsed=17m4.936s
+INFO [02-02|08:46:05.179] Exporting blocks                         exported=7058 txs=4227 elapsed=17m13.479s
+INFO [02-02|08:46:13.246] Exporting blocks                         exported=7099 txs=4244 elapsed=17m21.546s
+INFO [02-02|08:46:21.416] Exporting blocks                         exported=7153 txs=4260 elapsed=17m29.717s
+INFO [02-02|08:46:29.482] Exporting blocks                         exported=7183 txs=4265 elapsed=17m37.782s
+INFO [02-02|08:46:37.514] Exporting blocks                         exported=7233 txs=4283 elapsed=17m45.815s
+INFO [02-02|08:46:45.564] Exporting blocks                         exported=7271 txs=4336 elapsed=17m53.864s
+INFO [02-02|08:46:53.712] Exporting blocks                         exported=7316 txs=4345 elapsed=18m2.012s
+INFO [02-02|08:47:01.736] Exporting blocks                         exported=7359 txs=4469 elapsed=18m10.037s
+INFO [02-02|08:47:09.858] Exporting blocks                         exported=7388 txs=4559 elapsed=18m18.158s
+INFO [02-02|08:47:18.022] Exporting blocks                         exported=7442 txs=4564 elapsed=18m26.322s
+INFO [02-02|08:47:26.192] Exporting blocks                         exported=7499 txs=4577 elapsed=18m34.492s
+INFO [02-02|08:47:34.464] Exporting blocks                         exported=7542 txs=4595 elapsed=18m42.764s
+INFO [02-02|08:47:42.615] Exporting blocks                         exported=7588 txs=4604 elapsed=18m50.915s
+INFO [02-02|08:47:50.675] Exporting blocks                         exported=7643 txs=4628 elapsed=18m58.975s
+INFO [02-02|08:47:58.677] Exporting blocks                         exported=7683 txs=4671 elapsed=19m6.977s
+INFO [02-02|08:48:06.834] Exporting blocks                         exported=7713 txs=4750 elapsed=19m15.134s
+INFO [02-02|08:48:14.928] Exporting blocks                         exported=7759 txs=4776 elapsed=19m23.228s
+INFO [02-02|08:48:23.085] Exporting blocks                         exported=7804 txs=4794 elapsed=19m31.385s
+INFO [02-02|08:48:31.376] Exporting blocks                         exported=7840 txs=4819 elapsed=19m39.676s
+INFO [02-02|08:48:39.442] Exporting blocks                         exported=7881 txs=4858 elapsed=19m47.742s
+INFO [02-02|08:48:47.487] Exporting blocks                         exported=7924 txs=4885 elapsed=19m55.788s
+INFO [02-02|08:48:55.703] Exporting blocks                         exported=7964 txs=4936 elapsed=20m4.003s
+INFO [02-02|08:49:03.880] Exporting blocks                         exported=7995 txs=5065 elapsed=20m12.181s
+INFO [02-02|08:49:11.943] Exporting blocks                         exported=8022 txs=5106 elapsed=20m20.244s
+INFO [02-02|08:49:20.321] Exporting blocks                         exported=8068 txs=5120 elapsed=20m28.622s
+INFO [02-02|08:49:28.489] Exporting blocks                         exported=8117 txs=5139 elapsed=20m36.789s
+INFO [02-02|08:49:36.500] Exporting blocks                         exported=8156 txs=5147 elapsed=20m44.800s
+INFO [02-02|08:49:44.723] Exporting blocks                         exported=8205 txs=5155 elapsed=20m53.023s
+INFO [02-02|08:49:52.763] Exporting blocks                         exported=8245 txs=5163 elapsed=21m1.063s
+INFO [02-02|08:50:00.796] Exporting blocks                         exported=8282 txs=5230 elapsed=21m9.096s
+INFO [02-02|08:50:09.055] Exporting blocks                         exported=8316 txs=5234 elapsed=21m17.355s
+INFO [02-02|08:50:17.258] Exporting blocks                         exported=8353 txs=5239 elapsed=21m25.558s
+INFO [02-02|08:50:25.361] Exporting blocks                         exported=8396 txs=5259 elapsed=21m33.661s
+INFO [02-02|08:50:33.558] Exporting blocks                         exported=8437 txs=5264 elapsed=21m41.859s
+INFO [02-02|08:50:41.565] Exporting blocks                         exported=8466 txs=5268 elapsed=21m49.866s
+INFO [02-02|08:50:49.585] Exporting blocks                         exported=8496 txs=5330 elapsed=21m57.885s
+INFO [02-02|08:50:57.841] Exporting blocks                         exported=8538 txs=5343 elapsed=22m6.142s
+INFO [02-02|08:51:06.122] Exporting blocks                         exported=8570 txs=5351 elapsed=22m14.422s
+INFO [02-02|08:51:14.251] Exporting blocks                         exported=8606 txs=5408 elapsed=22m22.552s
+INFO [02-02|08:51:22.259] Exporting blocks                         exported=8615 txs=5532 elapsed=22m30.559s
+INFO [02-02|08:51:30.407] Exporting blocks                         exported=8650 txs=5538 elapsed=22m38.707s
+INFO [02-02|08:51:38.511] Exporting blocks                         exported=8685 txs=5560 elapsed=22m46.811s
+INFO [02-02|08:51:47.114] Exporting blocks                         exported=8717 txs=5574 elapsed=22m55.414s
+INFO [02-02|08:51:55.209] Exporting blocks                         exported=8743 txs=5589 elapsed=23m3.509s
+INFO [02-02|08:52:03.396] Exporting blocks                         exported=8773 txs=5591 elapsed=23m11.696s
+INFO [02-02|08:52:11.623] Exporting blocks                         exported=8802 txs=5598 elapsed=23m19.924s
+INFO [02-02|08:52:19.875] Exporting blocks                         exported=8829 txs=5603 elapsed=23m28.175s
+INFO [02-02|08:52:27.963] Exporting blocks                         exported=8864 txs=5623 elapsed=23m36.263s
+INFO [02-02|08:52:36.160] Exporting blocks                         exported=8897 txs=5628 elapsed=23m44.460s
+INFO [02-02|08:52:44.215] Exporting blocks                         exported=8929 txs=5632 elapsed=23m52.515s
+INFO [02-02|08:52:52.340] Exporting blocks                         exported=8971 txs=5639 elapsed=24m0.640s
+INFO [02-02|08:53:00.417] Exporting blocks                         exported=9005 txs=5643 elapsed=24m8.718s
+INFO [02-02|08:53:08.777] Exporting blocks                         exported=9038 txs=5653 elapsed=24m17.077s
+INFO [02-02|08:53:16.782] Exporting blocks                         exported=9063 txs=5660 elapsed=24m25.082s
+INFO [02-02|08:53:24.916] Exporting blocks                         exported=9096 txs=5662 elapsed=24m33.217s
+INFO [02-02|08:53:32.924] Exporting blocks                         exported=9134 txs=5669 elapsed=24m41.224s
+INFO [02-02|08:53:41.113] Exporting blocks                         exported=9170 txs=5689 elapsed=24m49.413s
+INFO [02-02|08:53:49.206] Exporting blocks                         exported=9208 txs=5693 elapsed=24m57.507s
+INFO [02-02|08:53:57.273] Exporting blocks                         exported=9242 txs=5723 elapsed=25m5.573s
+INFO [02-02|08:54:05.353] Exporting blocks                         exported=9286 txs=5730 elapsed=25m13.653s
+INFO [02-02|08:54:13.649] Exporting blocks                         exported=9319 txs=5738 elapsed=25m21.949s
+INFO [02-02|08:54:21.753] Exporting blocks                         exported=9358 txs=5748 elapsed=25m30.053s
+INFO [02-02|08:54:29.965] Exporting blocks                         exported=9384 txs=5770 elapsed=25m38.266s
+INFO [02-02|08:54:38.092] Exporting blocks                         exported=9413 txs=5778 elapsed=25m46.392s
+INFO [02-02|08:54:46.385] Exporting blocks                         exported=9446 txs=5781 elapsed=25m54.685s
+INFO [02-02|08:54:54.595] Exporting blocks                         exported=9484 txs=5784 elapsed=26m2.895s
+INFO [02-02|08:55:02.977] Exporting blocks                         exported=9500 txs=5786 elapsed=26m11.277s
+INFO [02-02|08:55:11.109] Exporting blocks                         exported=9530 txs=5791 elapsed=26m19.410s
+INFO [02-02|08:55:19.332] Exporting blocks                         exported=9556 txs=5794 elapsed=26m27.632s
+INFO [02-02|08:55:27.369] Exporting blocks                         exported=9592 txs=5796 elapsed=26m35.669s
+INFO [02-02|08:55:35.630] Exporting blocks                         exported=9628 txs=5805 elapsed=26m43.930s
+INFO [02-02|08:55:43.841] Exporting blocks                         exported=9674 txs=5814 elapsed=26m52.141s
+INFO [02-02|08:55:51.997] Exporting blocks                         exported=9716 txs=5823 elapsed=27m0.298s
+INFO [02-02|08:56:00.099] Exporting blocks                         exported=9753 txs=5833 elapsed=27m8.400s
+INFO [02-02|08:56:08.242] Exporting blocks                         exported=9792 txs=5862 elapsed=27m16.543s
+INFO [02-02|08:56:16.424] Exporting blocks                         exported=9834 txs=5873 elapsed=27m24.724s
+INFO [02-02|08:56:24.667] Exporting blocks                         exported=9876 txs=5881 elapsed=27m32.967s
+INFO [02-02|08:56:32.762] Exporting blocks                         exported=9909 txs=5893 elapsed=27m41.062s
+INFO [02-02|08:56:40.833] Exporting blocks                         exported=9949 txs=5907 elapsed=27m49.134s
+INFO [02-02|08:56:49.081] Exporting blocks                         exported=9984 txs=5939 elapsed=27m57.381s
+INFO [02-02|08:56:57.422] Exporting blocks                         exported=10029 txs=5945 elapsed=28m5.722s
+INFO [02-02|08:57:05.477] Exporting blocks                         exported=10066 txs=5951 elapsed=28m13.777s
+INFO [02-02|08:57:13.781] Exporting blocks                         exported=10098 txs=5965 elapsed=28m22.081s
+INFO [02-02|08:57:21.879] Exporting blocks                         exported=10135 txs=5972 elapsed=28m30.179s
+INFO [02-02|08:57:30.014] Exporting blocks                         exported=10173 txs=5981 elapsed=28m38.314s
+INFO [02-02|08:57:38.108] Exporting blocks                         exported=10215 txs=5996 elapsed=28m46.408s
+INFO [02-02|08:57:46.269] Exporting blocks                         exported=10259 txs=5999 elapsed=28m54.570s
+INFO [02-02|08:57:54.364] Exporting blocks                         exported=10293 txs=6009 elapsed=29m2.664s
+INFO [02-02|08:58:02.388] Exporting blocks                         exported=10319 txs=6081 elapsed=29m10.689s
+INFO [02-02|08:58:10.446] Exporting blocks                         exported=10361 txs=6085 elapsed=29m18.747s
+INFO [02-02|08:58:18.613] Exporting blocks                         exported=10396 txs=6092 elapsed=29m26.913s
+INFO [02-02|08:58:26.828] Exporting blocks                         exported=10438 txs=6097 elapsed=29m35.128s
+INFO [02-02|08:58:35.073] Exporting blocks                         exported=10463 txs=6152 elapsed=29m43.374s
+INFO [02-02|08:58:43.231] Exporting blocks                         exported=10504 txs=6171 elapsed=29m51.531s
+INFO [02-02|08:58:51.333] Exporting blocks                         exported=10541 txs=6189 elapsed=29m59.634s
+INFO [02-02|08:58:59.540] Exporting blocks                         exported=10576 txs=6199 elapsed=30m7.840s
+INFO [02-02|08:59:07.733] Exporting blocks                         exported=10611 txs=6235 elapsed=30m16.033s
+INFO [02-02|08:59:15.762] Exporting blocks                         exported=10647 txs=6251 elapsed=30m24.063s
+INFO [02-02|08:59:24.045] Exporting blocks                         exported=10684 txs=6254 elapsed=30m32.345s
+INFO [02-02|08:59:32.186] Exporting blocks                         exported=10715 txs=6261 elapsed=30m40.486s
+INFO [02-02|08:59:40.253] Exporting blocks                         exported=10745 txs=6264 elapsed=30m48.553s
+INFO [02-02|08:59:48.578] Exporting blocks                         exported=10785 txs=6274 elapsed=30m56.878s
+INFO [02-02|08:59:56.840] Exporting blocks                         exported=10824 txs=6285 elapsed=31m5.140s
+INFO [02-02|09:00:04.930] Exporting blocks                         exported=10863 txs=6288 elapsed=31m13.230s
+INFO [02-02|09:00:13.104] Exporting blocks                         exported=10895 txs=6294 elapsed=31m21.404s
+INFO [02-02|09:00:21.279] Exporting blocks                         exported=10930 txs=6304 elapsed=31m29.579s
+INFO [02-02|09:00:29.350] Exporting blocks                         exported=10970 txs=6306 elapsed=31m37.650s
+INFO [02-02|09:00:37.521] Exporting blocks                         exported=10993 txs=6312 elapsed=31m45.821s
+INFO [02-02|09:00:45.677] Exporting blocks                         exported=11018 txs=6374 elapsed=31m53.977s
+INFO [02-02|09:00:53.703] Exporting blocks                         exported=11043 txs=6386 elapsed=32m2.003s
+INFO [02-02|09:01:01.722] Exporting blocks                         exported=11070 txs=6400 elapsed=32m10.023s
+INFO [02-02|09:01:09.906] Exporting blocks                         exported=11097 txs=6407 elapsed=32m18.206s
+INFO [02-02|09:01:17.910] Exporting blocks                         exported=11118 txs=6430 elapsed=32m26.210s
+INFO [02-02|09:01:26.023] Exporting blocks                         exported=11143 txs=6433 elapsed=32m34.323s
+INFO [02-02|09:01:34.088] Exporting blocks                         exported=11164 txs=6434 elapsed=32m42.388s
+INFO [02-02|09:01:42.246] Exporting blocks                         exported=11207 txs=6448 elapsed=32m50.546s
+INFO [02-02|09:01:51.007] Exporting blocks                         exported=11237 txs=6462 elapsed=32m59.307s
+INFO [02-02|09:01:59.320] Exporting blocks                         exported=11267 txs=6470 elapsed=33m7.621s
+INFO [02-02|09:02:07.623] Exporting blocks                         exported=11296 txs=6481 elapsed=33m15.923s
+INFO [02-02|09:02:15.761] Exporting blocks                         exported=11328 txs=6490 elapsed=33m24.061s
+INFO [02-02|09:02:24.017] Exporting blocks                         exported=11362 txs=6500 elapsed=33m32.317s
+INFO [02-02|09:02:32.019] Exporting blocks                         exported=11397 txs=6511 elapsed=33m40.319s
+INFO [02-02|09:02:40.161] Exporting blocks                         exported=11429 txs=6524 elapsed=33m48.461s
+INFO [02-02|09:02:48.499] Exporting blocks                         exported=11470 txs=6536 elapsed=33m56.800s
+INFO [02-02|09:02:56.705] Exporting blocks                         exported=11503 txs=6544 elapsed=34m5.006s
+INFO [02-02|09:03:04.752] Exporting blocks                         exported=11536 txs=6559 elapsed=34m13.052s
+INFO [02-02|09:03:12.947] Exporting blocks                         exported=11570 txs=6564 elapsed=34m21.248s
+INFO [02-02|09:03:21.049] Exporting blocks                         exported=11600 txs=6581 elapsed=34m29.349s
+INFO [02-02|09:03:29.139] Exporting blocks                         exported=11637 txs=6585 elapsed=34m37.439s
+INFO [02-02|09:03:37.198] Exporting blocks                         exported=11671 txs=6595 elapsed=34m45.498s
+INFO [02-02|09:03:45.381] Exporting blocks                         exported=11703 txs=6601 elapsed=34m53.681s
+INFO [02-02|09:03:53.510] Exporting blocks                         exported=11736 txs=6609 elapsed=35m1.810s
+INFO [02-02|09:04:01.647] Exporting blocks                         exported=11774 txs=6613 elapsed=35m9.947s
+INFO [02-02|09:04:09.664] Exporting blocks                         exported=11812 txs=6618 elapsed=35m17.964s
+INFO [02-02|09:04:17.822] Exporting blocks                         exported=11848 txs=6628 elapsed=35m26.122s
+INFO [02-02|09:04:25.990] Exporting blocks                         exported=11884 txs=6633 elapsed=35m34.290s
+INFO [02-02|09:04:34.138] Exporting blocks                         exported=11918 txs=6636 elapsed=35m42.438s
+INFO [02-02|09:04:42.304] Exporting blocks                         exported=11954 txs=6637 elapsed=35m50.604s
+INFO [02-02|09:04:50.462] Exporting blocks                         exported=11983 txs=6639 elapsed=35m58.763s
+INFO [02-02|09:04:58.494] Exporting blocks                         exported=12014 txs=6641 elapsed=36m6.794s
+INFO [02-02|09:05:06.726] Exporting blocks                         exported=12046 txs=6645 elapsed=36m15.026s
+INFO [02-02|09:05:14.927] Exporting blocks                         exported=12075 txs=6655 elapsed=36m23.227s
+INFO [02-02|09:05:23.167] Exporting blocks                         exported=12106 txs=6677 elapsed=36m31.467s
+INFO [02-02|09:05:31.480] Exporting blocks                         exported=12136 txs=6707 elapsed=36m39.780s
+INFO [02-02|09:05:39.590] Exporting blocks                         exported=12161 txs=6711 elapsed=36m47.891s
+INFO [02-02|09:05:47.606] Exporting blocks                         exported=12193 txs=6774 elapsed=36m55.906s
+INFO [02-02|09:05:55.847] Exporting blocks                         exported=12217 txs=6884 elapsed=37m4.147s
+INFO [02-02|09:06:04.043] Exporting blocks                         exported=12258 txs=6893 elapsed=37m12.343s
+INFO [02-02|09:06:12.090] Exporting blocks                         exported=12277 txs=6975 elapsed=37m20.390s
+INFO [02-02|09:06:20.230] Exporting blocks                         exported=12311 txs=6987 elapsed=37m28.530s
+INFO [02-02|09:06:28.253] Exporting blocks                         exported=12353 txs=6998 elapsed=37m36.553s
+INFO [02-02|09:06:36.534] Exporting blocks                         exported=12373 txs=7084 elapsed=37m44.834s
+INFO [02-02|09:06:44.642] Exporting blocks                         exported=12410 txs=7091 elapsed=37m52.942s
+INFO [02-02|09:06:52.763] Exporting blocks                         exported=12436 txs=7100 elapsed=38m1.063s
+INFO [02-02|09:07:00.956] Exporting blocks                         exported=12467 txs=7121 elapsed=38m9.256s
+INFO [02-02|09:07:09.225] Exporting blocks                         exported=12497 txs=7139 elapsed=38m17.525s
+INFO [02-02|09:07:17.303] Exporting blocks                         exported=12528 txs=7143 elapsed=38m25.603s
+INFO [02-02|09:07:25.354] Exporting blocks                         exported=12555 txs=7151 elapsed=38m33.654s
+INFO [02-02|09:07:33.652] Exporting blocks                         exported=12582 txs=7175 elapsed=38m41.953s
+INFO [02-02|09:07:41.750] Exporting blocks                         exported=12616 txs=7183 elapsed=38m50.050s
+INFO [02-02|09:07:49.996] Exporting blocks                         exported=12654 txs=7204 elapsed=38m58.297s
+INFO [02-02|09:07:58.166] Exporting blocks                         exported=12689 txs=7222 elapsed=39m6.466s
+INFO [02-02|09:08:06.613] Exporting blocks                         exported=12706 txs=7320 elapsed=39m14.913s
+INFO [02-02|09:08:14.738] Exporting blocks                         exported=12739 txs=7329 elapsed=39m23.038s
+INFO [02-02|09:08:23.069] Exporting blocks                         exported=12770 txs=7350 elapsed=39m31.369s
+INFO [02-02|09:08:31.171] Exporting blocks                         exported=12802 txs=7367 elapsed=39m39.471s
+INFO [02-02|09:08:39.372] Exporting blocks                         exported=12835 txs=7377 elapsed=39m47.672s
+INFO [02-02|09:08:47.623] Exporting blocks                         exported=12870 txs=7380 elapsed=39m55.923s
+INFO [02-02|09:08:55.666] Exporting blocks                         exported=12906 txs=7388 elapsed=40m3.966s
+INFO [02-02|09:09:03.691] Exporting blocks                         exported=12946 txs=7398 elapsed=40m11.991s
+INFO [02-02|09:09:11.833] Exporting blocks                         exported=12990 txs=7406 elapsed=40m20.134s
+INFO [02-02|09:09:19.913] Exporting blocks                         exported=13024 txs=7414 elapsed=40m28.214s
+INFO [02-02|09:09:28.110] Exporting blocks                         exported=13050 txs=7484 elapsed=40m36.410s
+INFO [02-02|09:09:36.150] Exporting blocks                         exported=13091 txs=7490 elapsed=40m44.451s
+INFO [02-02|09:09:44.319] Exporting blocks                         exported=13129 txs=7503 elapsed=40m52.619s
