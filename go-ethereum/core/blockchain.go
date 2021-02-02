@@ -753,6 +753,26 @@ func (bc *BlockChain) ExportReceiptsN(w io.Writer, first uint64, last uint64) er
 		if block == nil {
 			return fmt.Errorf("export failed on #%d: not found", nr)
 		}
+		txs := block.Transactions()
+		for i := 0; i < len(txs); i++ {
+			txdata := txs[i].TxData()
+			if txdata.Recipient == nil {
+				continue
+			}
+			if !types.BloomLookup(bloom, txdata.Recipient) {
+				continue
+			}
+			receipt, _, _, _ := rawdb.ReadReceipt(bc.db, *txdata.Hash, bc.chainConfig)
+			count += 1
+			info := Info{*txdata, *receipt}
+			b, err := json.Marshal(info)
+			if err != nil {
+				return err
+			}
+			w.Write(b)
+			w.Write([]byte("\n"))
+		}
+		/*
 		receipts := bc.GetReceiptsByHash(block.Hash())
 		if receipts == nil {
 			return fmt.Errorf("export failed on #%d: receipts not found", nr)
@@ -776,7 +796,7 @@ func (bc *BlockChain) ExportReceiptsN(w io.Writer, first uint64, last uint64) er
 				w.Write(b)
 				w.Write([]byte("\n"))
 			}
-		}
+		}*/
 	
 		if time.Since(reported) >= statsReportLimit {
 			log.Info("Exporting blocks", "exported", block.NumberU64()-first, "txs", count, "elapsed", common.PrettyDuration(time.Since(start)))
