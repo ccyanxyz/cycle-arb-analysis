@@ -762,7 +762,7 @@ func (bc *BlockChain) ExportReceiptsN(w io.Writer, first uint64, last uint64) er
 			if !types.BloomLookup(bloom, txdata.Recipient) {
 				continue
 			}
-			receipt, _, _, _ := rawdb.ReadReceipt(bc.db, *txdata.Hash, bc.chainConfig)
+			receipt, _, _, _ := rawdb.ReadReceipt(bc.db, txs[i].Hash(), bc.chainConfig)
 			count += 1
 			info := Info{*txdata, *receipt}
 			b, err := json.Marshal(info)
