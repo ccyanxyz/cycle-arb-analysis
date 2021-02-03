@@ -1,6 +1,7 @@
 # from etherscan.accounts import Account
 import json
 import requests
+import os
 
 # url = "https://api.etherscan.io/api?module=account&action=txlist&address=0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D&startblock=10207858&endblock=10208858&sort=asc&apikey=SAWPNIM5KKPSQXRS28YA12B25SU1E3D3IF"
 
@@ -46,8 +47,13 @@ def get_tx_list(address):
 addrs = json.load(open('data/addrs.json'))
 addrs.reverse()
 counts = {}
+l = os.listdir('/data/tx_info')
+i = 0
 for addr in addrs:
-    print('address:', addr)
+    i += 1
+    print('address:', addr, i)
+    if addr in l:
+        continue
     count = get_tx_list(addr)
     counts[addr] = count
 json.dump(counts, open('data/addr_tx_count.json', 'w'))
