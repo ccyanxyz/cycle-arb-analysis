@@ -1,4 +1,4 @@
-from etherscan.accounts import Account
+# from etherscan.accounts import Account
 import json
 import requests
 
@@ -38,7 +38,7 @@ def get_tx_list(address):
         step = int(step*2)
         count += len(data['result'])
         for item in data['result']:
-            with open('data/tx_info/'+address, 'a') as f:
+            with open('/data/tx_info/'+address, 'a') as f:
                 f.write(json.dumps(item)+'\n')
     print('count:', count)
     return count
