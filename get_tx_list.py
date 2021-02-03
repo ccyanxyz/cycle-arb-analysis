@@ -29,7 +29,8 @@ def get_tx_list(address):
         try:
             ret = requests.get(u)
             data = ret.json()
-        except:
+        except Exception as e:
+            print(e)
             continue
         if len(data['result']) >= 10000:
             step = int(step/2)
