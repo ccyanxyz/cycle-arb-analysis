@@ -61,6 +61,9 @@ for path in top10:
         pr1 = blockwise_reserves[pair1][str(i0)]
         pr2 = blockwise_reserves[pair2][str(i1)]
         pr3 = blockwise_reserves[pair3][str(i2)]
+        if pr1['r0'] * pr1['r1'] * pr2['r1'] * pr2['r0'] * pr3['r0'] * pr3['r1'] == 0:
+            stats[path][bn] = 0
+            continue
         # token0/token1 * token2/token0 * token1/token2
         arbidx = pr1['r0'] / pr1['r1'] * pr2['r1'] / pr2['r0'] * pr3['r0'] / pr3['r1']
         stats[path][bn] = arbidx
