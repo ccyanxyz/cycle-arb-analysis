@@ -16,3 +16,12 @@ count uni/sushi total txs √
 6. before/after arbitrage a*b b*c c*a
 7. sushiswap blockwise reserves
 8. LP revenue
+
+
+1、blockwise arbitrage index
+2、average revenue/cycle length √
+3、market balance before/after cyclic arbitrage
+4、market price between Uni/Sushi
+5、normal transaction/cyclic transaction/market volume
+6、liquidity provider profit? 暂定
+7、position of cyclic transactions in block

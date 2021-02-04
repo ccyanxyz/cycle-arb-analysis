@@ -31,7 +31,6 @@ for addr in top10_path_pair_addrs:
     stats[addr] = {}
 with open('data/blockwise_reserves', 'r') as f:
     idx = 0
-    last_bn = 10000835
     for line in f:
         info = json.loads(line)
         blockNumber = list(info.keys())[0]
@@ -41,16 +40,14 @@ with open('data/blockwise_reserves', 'r') as f:
             if bn == 10000835 or bn == 0:
                 stats[addr][blockNumber] = {'r0': 0, 'r1': 0}
             else:
-                for i in range(last_bn+1, bn):
-                    try:
-                        stats[addr][i] = stats[addr][str(last_bn)]
-                    except:
-                        pass
+                try:
+                    stats[addr][i] = stats[addr][str(bn-1)]
+                except:
+                    pass
         for addr in info[blockNumber].keys():
             r0 = info[blockNumber][addr]['reserve0']
             r1 = info[blockNumber][addr]['reserve1']
             if addr in top10_path_pair_addrs:
                 stats[addr][bn] = {'r0': r0, 'r1': r1}
         idx += 1
-        last_bn = bn
 json.dump(stats, open('data/toppair_blockwise_reserves.json', 'w'))
