@@ -4,10 +4,10 @@ pairs = json.load(open('data/pairs.json'))
 
 def get_pair(token0, token1):
     for pair in pairs:
-        if token0 == pair['token0']['address'] and token1 == pair['token1']['address']:
-            return pair['address']
-        if token1 == pair['token0']['address'] and token0 == pair['token1']['address']:
-            return pair['address']
+        if token0 == pair['token0']['id'] and token1 == pair['token1']['id']:
+            return pair['id']
+        if token1 == pair['token0']['id'] and token0 == pair['token1']['id']:
+            return pair['id']
     return None
 
 counts = json.load(open('data/path_counts.json'))
@@ -35,6 +35,10 @@ for path in top10:
         pr1 = blockwise_reserves[pair1][bn]
         pr2 = blockwise_reserves[pair2][bn]
         pr3 = blockwise_reserves[pair3][bn]
+        if pr1['r0'] * pr1['r1'] * pr2['r0'] * pr2['r1'] * pr3['r0'] * pr3['r1'] == 0:
+            arbidx = 0
+            stats[path][bn] = arbidx
+            continue
         # token0/token1 * token2/token0 * token1/token2
         arbidx = pr1['r0'] / pr1['r1'] * pr2['r1'] / pr2['r0'] * pr3['r0'] / pr3['r1']
         stats[path][bn] = arbidx
