@@ -4,10 +4,10 @@ pairs = json.load(open('data/pairs.json'))
 
 def get_pair(token0, token1):
     for pair in pairs:
-        if token0 == pair['token0']['address'] and token1 == pair['token1']['address']:
-            return pair['address']
-        if token1 == pair['token0']['address'] and token0 == pair['token1']['address']:
-            return pair['address']
+        if token0 == pair['token0']['id'] and token1 == pair['token1']['id']:
+            return pair['id']
+        if token1 == pair['token0']['id'] and token0 == pair['token1']['id']:
+            return pair['id']
     return None
 
 counts = json.load(open('data/path_counts.json'))
