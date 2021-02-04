@@ -11,6 +11,7 @@ cycle_include_router.json
 blockwise_reserves
 *.swp
 data/toppair_blockwise_reserves.json
+data/toppair_blockwise_arb_index.json
 
 __pycache__/*
 log
