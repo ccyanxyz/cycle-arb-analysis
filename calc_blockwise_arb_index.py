@@ -36,9 +36,9 @@ for path in top10:
     g2 = iter(list(blockwise_reserves[pair3].keys()))
     l0, l1, l2 = list(blockwise_reserves[pair1].keys()), list(blockwise_reserves[pair2].keys()), list(blockwise_reserves[pair3].keys())
     idx0, idx1, idx2 = 0, 0, 0
-    i0 = next(g0)
-    i1 = next(g1)
-    i2 = next(g2)
+    i0 = int(next(g0))
+    i1 = int(next(g1))
+    i2 = int(next(g2))
     start = int(max([i0, i1, i2]))
     end = int(min([l0[-1], l1[-1], l2[-1]]))
     print('start:', start, 'end:', end)
@@ -46,17 +46,17 @@ for path in top10:
         while i0 < bn:
             if idx0 + 1 < len(l0) and int(l0[idx0+1]) > bn:
                 break
-            i0 = next(g0)
+            i0 = int(next(g0))
             idx0 += 1
         while i1 < bn:
             if idx1 + 1 < len(l1) and int(l1[idx1+1]) > bn:
                 break
-            i1 = next(g1)
+            i1 = int(next(g1))
             idx1 += 1
         while i2 < bn:
             if idx2 + 1 < len(l2) and int(l2[idx2+1]) > bn:
                 break
-            i2 = next(g2)
+            i2 = int(next(g2))
             idx2 += 1
         pr1 = blockwise_reserves[pair1][str(i0)]
         pr2 = blockwise_reserves[pair2][str(i1)]
