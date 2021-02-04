@@ -32,6 +32,7 @@ for path in top10:
     pair3 = top10_path[path]['pairs'][2]
     stats[path] = {}
     for bn in blockwise_reserves[pair1].keys():
+        bn = str(bn)
         pr1 = blockwise_reserves[pair1][bn]
         pr2 = blockwise_reserves[pair2][bn]
         pr3 = blockwise_reserves[pair3][bn]
