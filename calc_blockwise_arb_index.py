@@ -37,8 +37,17 @@ for path in top10:
     l0, l1, l2 = list(blockwise_reserves[pair1].keys()), list(blockwise_reserves[pair2].keys()), list(blockwise_reserves[pair3].keys())
     idx0, idx1, idx2 = 0, 0, 0
     i0 = int(next(g0))
+    if i0 == 0:
+        i0 = int(next(g0))
+        idx0 += 1
     i1 = int(next(g1))
+    if i1 == 0:
+        i1 = int(next(g1))
+        idx1 += 1
     i2 = int(next(g2))
+    if i2 == 0:
+        i2 = int(next(g2))
+        idx2 += 1
     start = int(max([i0, i1, i2]))
     end = int(min([l0[-1], l1[-1], l2[-1]]))
     print('start:', start, 'end:', end)
