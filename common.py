@@ -33,5 +33,24 @@ def get_symbol(addr):
     symbol = c.functions.symbol().call()
     return symbol
 
-def sig_to_addr(v, r, s):
-    pass
+'''
+# from eth_keys import keys
+from eth_utils import int_to_big_endian
+import ethereum
+def pad32(value: bytes) -> bytes:
+    return value.rjust(32, b'\x00')
+def int_to_byte(value: int) -> bytes:
+    return bytes([value])
+
+def sig_to_addr(hash, v, r, s):
+    v = int(v, 16)
+    r = int(r, 16)
+    s = int(s, 16)
+    if v in (27, 28):
+        vee = v
+    else:
+        vee = v - 10
+    pub = ethereum.utils.ecrecover_to_pub(hash[2:], vee, r, s)
+    addr = ethereum.utils.sha3(pub)[-20:].hex()
+    return addr
+'''
