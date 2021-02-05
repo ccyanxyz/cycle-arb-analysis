@@ -12,6 +12,7 @@ blockwise_reserves
 *.swp
 data/toppair_blockwise_reserves.json
 data/toppair_blockwise_arb_index.json
+data/0x7a250d5630b4cf539739df2c5dacb4c659f2488d
 
 __pycache__/*
 log
