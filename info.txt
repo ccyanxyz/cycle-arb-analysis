@@ -8,7 +8,7 @@ fig3 expand √
 fig7 count cycle √
 count uni/sushi total txs √
 
-1. arbitrage index top10
+1. arbitrage index top10 √
 2. daily mean revenue per tx √
 3. profit/revenue/cost distribution √
 4. failed tx, cost distribution
@@ -18,7 +18,7 @@ count uni/sushi total txs √
 8. LP revenue
 
 
-1、blockwise arbitrage index
+1、blockwise arbitrage index √
 2、average revenue/cycle length √
 3、market balance before/after cyclic arbitrage
 4、market price between Uni/Sushi

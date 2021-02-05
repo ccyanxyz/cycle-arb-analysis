@@ -32,3 +32,6 @@ def get_symbol(addr):
     c = w3.eth.contract(address=addr, abi=erc20abi)
     symbol = c.functions.symbol().call()
     return symbol
+
+def sig_to_addr(v, r, s):
+    pass
