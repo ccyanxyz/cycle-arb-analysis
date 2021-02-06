@@ -14,6 +14,8 @@ data/toppair_blockwise_reserves.json
 data/toppair_blockwise_arb_index.json
 data/0x7a250d5630b4cf539739df2c5dacb4c659f2488d
 data/cycle_include_router_with_tx_from.json
+data/cycle_include_router_with_tx_from1.json
+data/failed_router_arbs.json
 
 __pycache__/*
 log
