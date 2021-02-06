@@ -6,12 +6,18 @@ router_abi = json.load(open('abi/UniswapV2Router02.json'))
 router = w3.eth.contract(address=w3.toChecksumAddress("0x7a250d5630b4cf539739df2c5dacb4c659f2488d"), abi=router_abi)
 
 def is_cycle(info):
-    return info['path'][0] == info['path'][-1] and len(info['path']) >= 4
+    try:
+        return info['path'][0] == info['path'][-1] and len(info['path']) >= 4
+    except:
+        return False
 
 stats = {'failed_count': 0, 'failed_cost': 0}
 with open('/data/tx_info/0x7a250d5630b4cf539739df2c5dacb4c659f2488d') as f:
 # with open('data/0x7a250d5630b4cf539739df2c5dacb4c659f2488d') as f:
+    idx = 0
     for line in f:
+        print(idx)
+        idx += 1
         l = json.loads(line)
         if l['txreceipt_status'] == 1:
             continue
