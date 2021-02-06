@@ -8,5 +8,5 @@ with open('data/cycle_include_router.json') as f:
         info = json.loads(line)
         tx = w3.eth.getTransaction(info['receipt']['transactionHash'])
         with open('data/cycle_include_router_with_tx_from.json', 'a') as f1:
-            f1.write(json.dumps({'tx': w3.toJSON(tx), 'receipt': info['receipt']}))
+            f1.write(json.dumps({'tx': json.loads(w3.toJSON(tx)), 'receipt': info['receipt']})+'\n')
         idx += 1
