@@ -4,7 +4,7 @@ def sort_dict(d):
     return {k: v for k, v in sorted(d.items(), key=lambda item: item[1]['profit'], reverse=True)}
 
 from_stats = {}
-with open('data/cycle_include_router.json') as f:
+with open('data/cycle_include_router_with_tx_from.json') as f:
     for line in f:
         info = json.loads(line)
         if info['path'][0] != '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2':
