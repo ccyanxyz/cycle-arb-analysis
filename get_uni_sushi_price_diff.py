@@ -118,4 +118,4 @@ with open('data/sushi_blockwise_reserves', 'r') as f:
                 name_ = addr2symbols[addr]
                 sushi_stats[name_][bn] = {'r0': r0, 'r1': r1}
         idx += 1
-json.dump(stats, open('data/sushi_10pair_blockwise_reserves.json', 'w'))
+json.dump(sushi_stats, open('data/sushi_10pair_blockwise_reserves.json', 'w'))

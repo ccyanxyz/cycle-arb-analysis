@@ -69,8 +69,10 @@ for line in f:
                 for j in reversed(range(i)):
                     if str.lower(w3.toChecksumAddress(receipt['logs'][i]['address'])) != addr:
                         continue
+                    if receipt['logs'][j]['topics'][0] != "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef":
+                        continue
                     l = to_log_receipt(receipt['logs'][j].copy())
-                    event = erc20.events.Transfer().processLog(l)
+                    event = c.events.Transfer().processLog(l)
                     if 'from' in event['args'].keys() and event['args']['from'] == '0x0000000000000000000000000000000000000000' and event['args']['to'] != '0x0000000000000000000000000000000000000000':
                         stats[addr][d] += event['args']['value']
                         break
@@ -80,8 +82,10 @@ for line in f:
                 for j in reversed(range(i)):
                     if str.lower(w3.toChecksumAddress(receipt['logs'][i]['address'])) != addr:
                         continue
+                    if receipt['logs'][j]['topics'][0] != "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef":
+                        continue
                     l = to_log_receipt(receipt['logs'][j].copy())
-                    event = erc20.events.Transfer().processLog(l)
+                    event = c.events.Transfer().processLog(l)
                     if 'from' in event['args'].keys() and event['args']['from'] != '0x0000000000000000000000000000000000000000' and event['args']['to'] == '0x0000000000000000000000000000000000000000':
                         stats[addr][d] = stats[addr][d] - event['args']['value']
                         break
