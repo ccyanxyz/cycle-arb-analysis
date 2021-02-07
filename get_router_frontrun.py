@@ -56,5 +56,6 @@ with open('data/failed_router_arbs.json') as f:
             continue
         with open('data/frontruned_arb_info.json', 'a') as f1:
             i = {'frontrun': f_tx, 'victim': info}
+            f1.write(json.dumps(i)+'\n')
         stats['frontrun'] += 1
 print(stats)
