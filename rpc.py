@@ -53,6 +53,20 @@ def generate_get_reserves_json_rpc(pairs, blockNumber='latest'):
                     ]
                 )
 
+def generate_get_supply_json_rpc(addr, start, end):
+    pairABI = json.load(open('abi/erc20.abi'))
+    c = w3_rpc.eth.contract(abi=pairABI) 
+    for i in range(start, end):
+        yield generate_json_rpc(
+                method='eth_call',
+                params=[{
+                    'to': addr,
+                    'data': c.encodeABI(fn_name='totalSupply', args=[]),
+                    },
+                    hex(i),
+                    ]
+                )
+
 def generate_get_receipt_json_rpc(transaction_hashes):
     for idx, transaction_hash in enumerate(transaction_hashes):
         yield generate_json_rpc(
