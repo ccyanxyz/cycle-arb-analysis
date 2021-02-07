@@ -63,13 +63,15 @@ for line in f:
         if d not in stats[pair].keys():
             stats[pair][d] = 0
     for i in range(len(receipt['logs'])):
+        if not len(receipt['logs'][i]['topics']):
+            continue
         if receipt['logs'][i]['topics'][0] == mint_topic:
             addr = str.lower(w3.toChecksumAddress(receipt['logs'][i]['address']))
             if addr in stats.keys():
                 for j in reversed(range(i)):
                     if str.lower(w3.toChecksumAddress(receipt['logs'][i]['address'])) != addr:
                         continue
-                    if receipt['logs'][j]['topics'][0] != "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef":
+                    if len(receipt['logs'][j]['topics']) and receipt['logs'][j]['topics'][0] != "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef":
                         continue
                     l = to_log_receipt(receipt['logs'][j].copy())
                     event = c.events.Transfer().processLog(l)
@@ -82,7 +84,7 @@ for line in f:
                 for j in reversed(range(i)):
                     if str.lower(w3.toChecksumAddress(receipt['logs'][i]['address'])) != addr:
                         continue
-                    if receipt['logs'][j]['topics'][0] != "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef":
+                    if len(receipt['logs'][j]['topics']) and receipt['logs'][j]['topics'][0] != "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef":
                         continue
                     l = to_log_receipt(receipt['logs'][j].copy())
                     event = c.events.Transfer().processLog(l)
