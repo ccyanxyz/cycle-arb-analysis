@@ -61,10 +61,13 @@ for path in top10:
     addr2symbols[pair2] = path
     symbol2addrs[path] = {'uni': pair1, 'sushi': pair2}
     print(path, pair1, pair2)
+print(addr2symbols)
+exit()
 
 stats = {}
 for symbol in top10:
     stats[symbol] = {}
+'''
 with open('data/blockwise_reserves', 'r') as f:
     idx = 0
     for line in f:
@@ -89,7 +92,7 @@ with open('data/blockwise_reserves', 'r') as f:
                 stats[name_][bn] = {'r0': r0, 'r1': r1}
         idx += 1
 json.dump(stats, open('data/10pair_blockwise_reserves.json', 'w'))
-
+'''
 sushi_stats = {}
 for symbol in top10:
     sushi_stats[symbol] = {}
@@ -100,8 +103,8 @@ with open('data/sushi_blockwise_reserves', 'r') as f:
         blockNumber = list(info.keys())[0]
         bn = int(blockNumber)
         print('sushi', bn)
-        name = addr2symbols[addr]
         for addr in sushi_top10_path_pair_addrs:
+            name = addr2symbols[addr]
             if bn == 10000835 or bn == 0:
                 sushi_stats[name][blockNumber] = {'r0': 0, 'r1': 0}
             else:
