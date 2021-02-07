@@ -11,8 +11,16 @@ def search_frontrun(start, end, txinfo):
     frontrun_tx = None
     s = bisect(bns, start) - 1
     e = bisect(bns, end) + 1
-    start_line = bnidx[str(s)]
-    end_line = bnidx[str(e)]
+    if s >= len(bns):
+        sb = bns[-1]
+    else:
+        sb = bns[s]
+    if e >= len(bns):
+        eb = bns[-1]
+    else:
+        eb = bns[e]
+    start_line = bnidx[str(sb)]
+    end_line = bnidx[str(eb)]
     data = txinfo['input']
     for i in range(start_line, end_line):
         line = get_line(i)
@@ -48,7 +56,7 @@ idx = 0
 with open('data/failed_router_arbs.json') as f:
     for line in f:
         print(idx)
-        idx == 1
+        idx += 1
         info = json.loads(line)
         bn = int(info['blockNumber'])
         f_tx = search_frontrun(bn - 20, bn, info)
