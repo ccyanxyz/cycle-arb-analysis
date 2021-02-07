@@ -6,17 +6,17 @@ sushi_pairs = json.load(open('data/sushi_pairs.json'))
 
 def get_pair(token0, token1):
     for pair in pairs:
-        if token0 == pair['token0']['id'] and token1 == pair['token1']['id']:
+        if token0 == pair['token0']['symbol'] and token1 == pair['token1']['symbol']:
             return pair['id']
-        if token1 == pair['token0']['id'] and token0 == pair['token1']['id']:
+        if token1 == pair['token0']['symbol'] and token0 == pair['token1']['symbol']:
             return pair['id']
     return None
 
 def get_sushi_pair(token0, token1):
     for pair in sushi_pairs:
-        if token0 == pair['token0']['id'] and token1 == pair['token1']['id']:
+        if token0 == pair['token0']['symbol'] and token1 == pair['token1']['symbol']:
             return pair['id']
-        if token1 == pair['token0']['id'] and token0 == pair['token1']['id']:
+        if token1 == pair['token0']['symbol'] and token0 == pair['token1']['symbol']:
             return pair['id']
     return None
 
@@ -28,7 +28,7 @@ top10 = ['WBTC-ETH',
 'ETH-USDT',
 'YFI-ETH',
 'LINK-ETH',
-'AAVE-ETH',
+# 'AAVE-ETH',
 'SNX-ETH',
 'WBTC-BADGER',
 'LON-USDT',
@@ -60,11 +60,11 @@ for path in top10:
     sushi_top10_path_pair_addrs.append(pair2)
     addr2symbols[pair2] = path
     symbol2addrs[path] = {'uni': pair1, 'sushi': pair2}
+    print(path, pair1, pair2)
 
 stats = {}
 for symbol in top10:
     stats[symbol] = {}
-'''
 with open('data/blockwise_reserves', 'r') as f:
     idx = 0
     for line in f:
@@ -89,7 +89,6 @@ with open('data/blockwise_reserves', 'r') as f:
                 stats[name_][bn] = {'r0': r0, 'r1': r1}
         idx += 1
 json.dump(stats, open('data/10pair_blockwise_reserves.json', 'w'))
-'''
 
 sushi_stats = {}
 for symbol in top10:
