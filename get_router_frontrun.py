@@ -7,8 +7,8 @@ def get_line(i):
 
 def search_frontrun(start, end, txinfo):
     frontrun_tx = None
-    start_line = bnidx[start]
-    end_line = bnidx[end+1]
+    start_line = bnidx[str(start)]
+    end_line = bnidx[str(end+1)]
     data = txinfo['input']
     for i in range(start_line, end_line):
         line = get_line(i)
@@ -38,8 +38,11 @@ def search_frontrun(start, end, data):
 '''
 
 stats = {'frontrun': 0}
+idx = 0
 with open('data/failed_router_arbs.json') as f:
     for line in f:
+        print(idx)
+        idx == 1
         info = json.loads(line)
         bn = int(info['blockNumber'])
         f_tx = search_frontrun(bn - 20, bn, info)
