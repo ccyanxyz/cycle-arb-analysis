@@ -1,20 +1,26 @@
 import json
+from bisect import bisect
 import linecache
 
 bnidx = json.load(open('data/block_line_index.json'))
+bns = [int(i) for i in bnidx.keys()]
 def get_line(i):
     return linecache.getline('data/cycle_include_router_with_tx_from1.json', i).strip()
 
 def search_frontrun(start, end, txinfo):
     frontrun_tx = None
-    start_line = bnidx[str(start)]
-    end_line = bnidx[str(end+1)]
+    s = bisect(bns, start) - 1
+    e = bisect(bns, end) + 1
+    start_line = bnidx[str(s)]
+    end_line = bnidx[str(e)]
     data = txinfo['input']
     for i in range(start_line, end_line):
         line = get_line(i)
         info = json.loads(line)
         bn = int(info['receipt']['blockNumber'], 16)
         if info['tx']['hash'] == txinfo['hash']:
+            break
+        if bn > end:
             break
         if info['tx']['input'] == data:
             frontrun_tx = info
