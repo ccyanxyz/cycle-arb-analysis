@@ -10,16 +10,16 @@ def search_frontrun(start, end, data):
                 continue
             if bn > end:
                 break
-            if info['input'] == data:
+            if info['tx']['input'] == data:
                 frontrun_tx = info
     return frontrun_tx
 
-stats = {}
+stats = {'frontrun': 0}
 with open('data/failed_router_arbs.json') as f:
     for line in f:
         info = json.loads(line)
         bn = int(info['blockNumber'])
-        f_tx = search_frontrun(bn - 20, end, info['input'])
+        f_tx = search_frontrun(bn - 20, bn, info['input'])
         if not f_tx:
             continue
         with open('data/frontruned_arb_info.json', 'a') as f1:
