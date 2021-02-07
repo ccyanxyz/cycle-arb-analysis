@@ -62,7 +62,6 @@ for path in top10:
     symbol2addrs[path] = {'uni': pair1, 'sushi': pair2}
     print(path, pair1, pair2)
 print(addr2symbols)
-exit()
 
 stats = {}
 for symbol in top10:

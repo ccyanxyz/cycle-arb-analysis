@@ -10,11 +10,11 @@ swap_topic = "0xd78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822
 mint_topic = "0x4c209b5fc8ad50758f13e2e1088ba56a560dff690a1c6fef26394f4c03821c4f"
 burn_topic = "0xdccd412f0b1252819cb1fd330b93224ca42612892bb3f4f789976e6d81936496"
 w3 = Web3()
-pairABI = json.load(open('IUniswapV2Pair.json'))['abi']
-erc20abi = json.load(open('erc20.abi'))
+pairABI = json.load(open('abi/IUniswapV2Pair.json'))['abi']
+erc20abi = json.load(open('abi/erc20.abi'))
 c = w3.eth.contract(abi=pairABI)
 erc20 = w3.eth.contract(abi=erc20abi)
-ts = json.load(open('ts.json'))
+ts = json.load(open('data/ts.json'))
 
 def to_dict(pairs):
     d = {}
