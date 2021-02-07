@@ -1,4 +1,5 @@
 import json
+from web3.auto import w3
 
 pairs = json.load(open('data/pairs.json'))
 sushi_pairs = json.load(open('data/sushi_pairs.json'))
@@ -55,6 +56,7 @@ for path in top10:
     addr2symbols[pair1] = path
 
     pair2 = get_sushi_pair(token0, token1)
+    pair2 = w3.toChecksumAddress(pair2)
     sushi_top10_path_pair_addrs.append(pair2)
     addr2symbols[pair2] = path
     symbol2addrs[path] = {'uni': pair1, 'sushi': pair2}
@@ -62,6 +64,7 @@ for path in top10:
 stats = {}
 for symbol in top10:
     stats[symbol] = {}
+'''
 with open('data/blockwise_reserves', 'r') as f:
     idx = 0
     for line in f:
@@ -86,6 +89,7 @@ with open('data/blockwise_reserves', 'r') as f:
                 stats[name_][bn] = {'r0': r0, 'r1': r1}
         idx += 1
 json.dump(stats, open('data/10pair_blockwise_reserves.json', 'w'))
+'''
 
 sushi_stats = {}
 for symbol in top10:
