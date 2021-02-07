@@ -86,4 +86,4 @@ for line in f:
                         stats[addr][d] = stats[addr][d] - event['args']['value']
                         break
 
-json.dump(stats, open('lp_stats.json', 'w'))
+json.dump(stats, open('data/lp_stats.json', 'w'))
