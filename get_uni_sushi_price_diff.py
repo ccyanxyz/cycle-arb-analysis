@@ -108,7 +108,7 @@ with open('data/sushi_blockwise_reserves', 'r') as f:
                 sushi_stats[name][blockNumber] = {'r0': 0, 'r1': 0}
             else:
                 try:
-                    sushi_stats[name][i] = stats[addr][str(bn-1)]
+                    sushi_stats[name][i] = sushi_stats[name][str(bn-1)]
                 except:
                     pass
         for addr in info[blockNumber].keys():
