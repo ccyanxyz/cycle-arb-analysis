@@ -68,6 +68,7 @@ def main():
                     f1.write(json.dumps(stats)+'\n')
                 stats = {}
                 stats[blockNumber] = {}
+                last_blk = blockNumber
             flag, pair_revs = parse_reserves(r)
             if not flag:
                 continue
