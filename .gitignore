@@ -18,6 +18,7 @@ data/cycle_include_router_with_tx_from1.json
 data/failed_router_arbs.json
 data/3path_blockwise_arb_index.json
 data/3path_blockwise_reserves.json
+data/sushi_blockwise_reserves
 
 __pycache__/*
 log
