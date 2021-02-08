@@ -10,11 +10,11 @@ swap_topic = "0xd78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822
 mint_topic = "0x4c209b5fc8ad50758f13e2e1088ba56a560dff690a1c6fef26394f4c03821c4f"
 burn_topic = "0xdccd412f0b1252819cb1fd330b93224ca42612892bb3f4f789976e6d81936496"
 w3 = Web3()
-pairABI = json.load(open('IUniswapV2Pair.json'))['abi']
-erc20abi = json.load(open('erc20.abi'))
+pairABI = json.load(open('abi/IUniswapV2Pair.json'))['abi']
+erc20abi = json.load(open('abi/erc20.abi'))
 c = w3.eth.contract(abi=pairABI)
 erc20 = w3.eth.contract(abi=erc20abi)
-ts = json.load(open('ts.json'))
+ts = json.load(open('data/ts.json'))
 
 def to_dict(pairs):
     d = {}
@@ -63,14 +63,18 @@ for line in f:
         if d not in stats[pair].keys():
             stats[pair][d] = 0
     for i in range(len(receipt['logs'])):
+        if not len(receipt['logs'][i]['topics']):
+            continue
         if receipt['logs'][i]['topics'][0] == mint_topic:
             addr = str.lower(w3.toChecksumAddress(receipt['logs'][i]['address']))
             if addr in stats.keys():
                 for j in reversed(range(i)):
                     if str.lower(w3.toChecksumAddress(receipt['logs'][i]['address'])) != addr:
                         continue
+                    if len(receipt['logs'][j]['topics']) and receipt['logs'][j]['topics'][0] != "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef":
+                        continue
                     l = to_log_receipt(receipt['logs'][j].copy())
-                    event = erc20.events.Transfer().processLog(l)
+                    event = c.events.Transfer().processLog(l)
                     if 'from' in event['args'].keys() and event['args']['from'] == '0x0000000000000000000000000000000000000000' and event['args']['to'] != '0x0000000000000000000000000000000000000000':
                         stats[addr][d] += event['args']['value']
                         break
@@ -80,8 +84,10 @@ for line in f:
                 for j in reversed(range(i)):
                     if str.lower(w3.toChecksumAddress(receipt['logs'][i]['address'])) != addr:
                         continue
+                    if len(receipt['logs'][j]['topics']) and receipt['logs'][j]['topics'][0] != "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef":
+                        continue
                     l = to_log_receipt(receipt['logs'][j].copy())
-                    event = erc20.events.Transfer().processLog(l)
+                    event = c.events.Transfer().processLog(l)
                     if 'from' in event['args'].keys() and event['args']['from'] != '0x0000000000000000000000000000000000000000' and event['args']['to'] == '0x0000000000000000000000000000000000000000':
                         stats[addr][d] = stats[addr][d] - event['args']['value']
                         break
