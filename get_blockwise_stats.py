@@ -48,7 +48,8 @@ def parse_reserves(receipt):
         pair['reserve0'] = event['args']['reserve0']
         pair['reserve1'] = event['args']['reserve1']
         pair_revs[addr] = pair
-    return True, pair_revs
+        flag = True
+    return flag, pair_revs
 
 def main():
     stats = {0:{}}
