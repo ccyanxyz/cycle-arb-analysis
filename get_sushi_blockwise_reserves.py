@@ -36,9 +36,9 @@ def parse_reserves(receipt):
         if not len(log['topics']) or not log['topics'][0] == sync_topic:
             continue
         pair = None
-        addr = w3.toChecksumAddress(log['address'])
+        # addr = w3.toChecksumAddress(log['address'])
         try:
-            pair = pairs[pairs_dict[addr]]
+            pair = pairs[pairs_dict[addr.lower()]]
         except:
             pass
         if not pair:
@@ -48,7 +48,8 @@ def parse_reserves(receipt):
         pair['reserve0'] = event['args']['reserve0']
         pair['reserve1'] = event['args']['reserve1']
         pair_revs[addr] = pair
-    return True, pair_revs
+        flag = True
+    return flag, pair_revs
 
 def main():
     stats = {0:{}}
@@ -68,6 +69,7 @@ def main():
                     f1.write(json.dumps(stats)+'\n')
                 stats = {}
                 stats[blockNumber] = {}
+                last_blk = blockNumber
             flag, pair_revs = parse_reserves(r)
             if not flag:
                 continue

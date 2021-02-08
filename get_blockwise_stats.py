@@ -48,7 +48,8 @@ def parse_reserves(receipt):
         pair['reserve0'] = event['args']['reserve0']
         pair['reserve1'] = event['args']['reserve1']
         pair_revs[addr] = pair
-    return True, pair_revs
+        flag = True
+    return flag, pair_revs
 
 def main():
     stats = {0:{}}
@@ -60,10 +61,11 @@ def main():
             blockNumber = int(r['blockNumber'], 16)
             print(blockNumber)
             if blockNumber > last_blk:
-                with open('data/blockwise_reserves', 'a') as f1:
+                with open('data/uni_blockwise_reserves', 'a') as f1:
                     f1.write(json.dumps(stats)+'\n')
                 stats = {}
                 stats[blockNumber] = {}
+                last_blk = blockNumber
             flag, pair_revs = parse_reserves(r)
             if not flag:
                 continue
