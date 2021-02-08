@@ -112,10 +112,11 @@ with open('data/sushi_blockwise_reserves', 'r') as f:
                 except:
                     pass
         for addr in info[blockNumber].keys():
+            ca = w3.toChecksumAddress(addr)
             r0 = info[blockNumber][addr]['reserve0']
             r1 = info[blockNumber][addr]['reserve1']
-            if addr in sushi_top10_path_pair_addrs:
-                name_ = addr2symbols[addr]
+            if ca in sushi_top10_path_pair_addrs:
+                name_ = addr2symbols[ca]
                 sushi_stats[name_][bn] = {'r0': r0, 'r1': r1}
         idx += 1
 json.dump(sushi_stats, open('data/sushi_10pair_blockwise_reserves.json', 'w'))
