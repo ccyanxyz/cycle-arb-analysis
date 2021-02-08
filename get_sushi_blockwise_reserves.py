@@ -37,6 +37,7 @@ def parse_reserves(receipt):
             continue
         pair = None
         # addr = w3.toChecksumAddress(log['address'])
+        addr = log['address']
         try:
             pair = pairs[pairs_dict[addr.lower()]]
         except:
