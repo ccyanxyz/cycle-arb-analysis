@@ -19,7 +19,7 @@
   * go-ethereum/core/transaction.go: start from line 49, Txdata structure
 * Key Python scripts:
   * get_all_pairs_thegraph.py: get all uniswap pairs via TheGraph API
-  * get_all_cycle_arbs.py: identify and extract all successful cyclic arbitrage
+  * get_all_cycle_arbs.py: identify and extract all successful cyclic arbitrages
   * count_cycles.py: count the cycle lengths
   * get_start_token_stats.py: count the start tokens for cyclic arbitrages
   * get_daily_revenue.py: get daily revenue of all cyclic arbitrages
