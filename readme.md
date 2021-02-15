@@ -1,5 +1,6 @@
 # Uniswap Cycle Arbitrage Analysis
 
+* Previous work on cycle arbitrage: https://github.com/ccyanxyz/uniswap-arbitrage-analysis
 * General structure:
 
 ```
